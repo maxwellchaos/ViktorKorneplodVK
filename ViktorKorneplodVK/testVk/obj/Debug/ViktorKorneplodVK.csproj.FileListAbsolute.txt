@@ -1,0 +1,14 @@
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\testVk.exe.config
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\testVk.exe
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\testVk.pdb
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.AssemblyReference.cache
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.MainForm.resources
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.KommentPostovSoobForm.resources
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.Properties.Resources.resources
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.GenerateResource.cache
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.CoreCompileInputs.cache
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.CopyComplete
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.exe
+C:\Users\Студент\Downloads\ViktorKorneplodVK-main\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.pdb

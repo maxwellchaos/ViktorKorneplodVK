@@ -34,6 +34,7 @@ namespace testVk
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.AvatarPictureBox = new System.Windows.Forms.PictureBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.KommentPostovSoobButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@ namespace testVk
             this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "label1";
+            this.LastNameLabel.Click += new System.EventHandler(this.LastNameLabel_Click);
             // 
             // AvatarPictureBox
             // 
@@ -84,11 +86,22 @@ namespace testVk
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
             // 
+            // KommentPostovSoobButton
+            // 
+            this.KommentPostovSoobButton.Location = new System.Drawing.Point(12, 278);
+            this.KommentPostovSoobButton.Name = "KommentPostovSoobButton";
+            this.KommentPostovSoobButton.Size = new System.Drawing.Size(120, 34);
+            this.KommentPostovSoobButton.TabIndex = 7;
+            this.KommentPostovSoobButton.Text = "Комментарии к постам сообщества";
+            this.KommentPostovSoobButton.UseVisualStyleBackColor = true;
+            this.KommentPostovSoobButton.Click += new System.EventHandler(this.KommentPostovSoobButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 392);
+            this.Controls.Add(this.KommentPostovSoobButton);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
             this.Controls.Add(this.LastNameLabel);
@@ -108,6 +121,7 @@ namespace testVk
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.PictureBox AvatarPictureBox;
         private System.Windows.Forms.Label FirstNameLabel;
+        private System.Windows.Forms.Button KommentPostovSoobButton;
     }
 }
 

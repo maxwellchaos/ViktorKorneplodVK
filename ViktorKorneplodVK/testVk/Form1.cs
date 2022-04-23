@@ -100,5 +100,18 @@ namespace testVk
         {
         
         }
+
+        private void LastNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KommentPostovSoobButton_Click(object sender, EventArgs e)
+        {
+            //Вызов KommentPostovSoobForm(Комментарии к постам сообщества)
+            KommentPostovSoobForm frm = new KommentPostovSoobForm();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
     }
 }
