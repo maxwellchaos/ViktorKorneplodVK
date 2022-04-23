@@ -100,5 +100,18 @@ namespace testVk
         {
         
         }
+
+        private void FirstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Likebutton_Click(object sender, EventArgs e)
+        {
+            LikeForm frm = new LikeForm();
+            frm.access_token = this.access_token;
+            frm.Show();
+            
+        }
     }
 }

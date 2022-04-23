@@ -34,6 +34,7 @@ namespace testVk
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.AvatarPictureBox = new System.Windows.Forms.PictureBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.Likebutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +84,24 @@ namespace testVk
             this.FirstNameLabel.Size = new System.Drawing.Size(86, 31);
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
+            this.FirstNameLabel.Click += new System.EventHandler(this.FirstNameLabel_Click);
+            // 
+            // Likebutton
+            // 
+            this.Likebutton.Location = new System.Drawing.Point(29, 110);
+            this.Likebutton.Name = "Likebutton";
+            this.Likebutton.Size = new System.Drawing.Size(122, 35);
+            this.Likebutton.TabIndex = 7;
+            this.Likebutton.Text = "лайкер фото на стене сообщества";
+            this.Likebutton.UseVisualStyleBackColor = true;
+            this.Likebutton.Click += new System.EventHandler(this.Likebutton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 392);
+            this.Controls.Add(this.Likebutton);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
             this.Controls.Add(this.LastNameLabel);
@@ -108,6 +121,7 @@ namespace testVk
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.PictureBox AvatarPictureBox;
         private System.Windows.Forms.Label FirstNameLabel;
+        private System.Windows.Forms.Button Likebutton;
     }
 }
 
