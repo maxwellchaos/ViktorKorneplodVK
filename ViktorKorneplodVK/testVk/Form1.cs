@@ -100,5 +100,12 @@ namespace testVk
         {
         
         }
+
+        private void DeletingBannedBlockedFriends_Click(object sender, EventArgs e)
+        {
+            FormDeletingBannedBlockedFriends frm = new FormDeletingBannedBlockedFriends();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
     }
 }
