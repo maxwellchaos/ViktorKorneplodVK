@@ -49,5 +49,31 @@ namespace testVk
             public List<Item> items { get; set; }
         }
     }
+   
+
+    public class friendList
+    {
+        public Response response { get; set; }
+        public class Item
+        {
+            public int id { get; set; }
+            public string first_name { get; set; }
+            public string last_name { get; set; }
+            public bool can_access_closed { get; set; }
+            public bool is_closed { get; set; }
+            public string bdate { get; set; }
+            public string track_code { get; set; }
+            public string deactivated { get; set; }
+        }
+
+        public class Response
+        {
+            internal string bdate;
+
+            public int count { get; set; }
+            public List<Item> items { get; set; }
+        }
+    }
+
 
 }
