@@ -98,7 +98,7 @@ namespace testVk
 
         private void button3_Click(object sender, EventArgs e)
         {
-        
+        //опвапоррвва
         }
 
         private void buttonPostOnStrangeWall_Click(object sender, EventArgs e)
