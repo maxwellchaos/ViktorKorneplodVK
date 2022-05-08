@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttondeleted = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -36,16 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(100, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "показать друзей";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -57,7 +46,7 @@
             // 
             // buttondeleted
             // 
-            this.buttondeleted.Location = new System.Drawing.Point(100, 249);
+            this.buttondeleted.Location = new System.Drawing.Point(100, 208);
             this.buttondeleted.Name = "buttondeleted";
             this.buttondeleted.Size = new System.Drawing.Size(128, 23);
             this.buttondeleted.TabIndex = 4;
@@ -67,7 +56,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(100, 220);
+            this.button3.Location = new System.Drawing.Point(100, 179);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 23);
             this.button3.TabIndex = 5;
@@ -114,7 +103,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttondeleted);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.Name = "FormDeletingBannedBlockedFriends";
             this.Text = "FormDeletingBannedBlockedFriends";
             this.Load += new System.EventHandler(this.FormDeletingBannedBlockedFriends_Load);
@@ -124,7 +112,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttondeleted;
         private System.Windows.Forms.Button button3;

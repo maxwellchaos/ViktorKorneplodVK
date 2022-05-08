@@ -31,32 +31,6 @@ namespace testVk
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        // мои запросы https://api.vk.com/method/friends.get?fields=bdate&access_token=7d904d438e43e09168ababf069fba93c9c78c7483621c770a41a2035f9721d95ae14e2a9e286186ab5957&v=5.131
-        https://api.vk.com/method/friends.delete&access_token=bb98347f29c98cb85c27b21865a0bf2a8e6c540db6b665373956aea2d0b2b5b118bf9ab67b5189b30aa4a&v=5.131
-            textBox1.Text = "";
-            WebClient client = new WebClient();
-            string answer = Encoding.UTF8.GetString(client.DownloadData(
-                   "https://api.vk.com/method/friends.get?"
-                   + "fields=bdate&"
-                   + access_token
-                   + "&v=5.131"
-                   ));
-            //textBox1.Text = answer;
-            friendList friends = JsonConvert.DeserializeObject<friendList>(answer);
-            //textBox1.Text = List.response.bdate;
-
-            foreach (friendList.Item friend in friends.response.items)
-            {
-                if (friend.deactivated != null)
-                {
-                    textBox1.Text = textBox1.Text + friend.first_name + " " + friend.id.ToString() + "\r\n";
-                }
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -85,6 +59,8 @@ namespace testVk
             progressBar1.Value = 0;
             int k = 0;
             label1.Visible = false;
+            buttondeleted.Enabled = false;
+            button3.Enabled = false;
             foreach (friendList.Item friend in friends.response.items)
             {
                 if (friend.deactivated != null)
@@ -112,6 +88,8 @@ namespace testVk
             if (progressBar1.Value >= 2)
             {
                 label2.Visible = true;
+                buttondeleted.Enabled = true;
+                button3.Enabled = true;
             }
         }
 
@@ -133,6 +111,8 @@ namespace testVk
             progressBar1.Maximum = 1000;
             progressBar1.Value = 0;
             int k = 0;
+            buttondeleted.Enabled = false;
+            button3.Enabled = false;
             foreach (friendList.Item friend in friends.response.items)
             {
                 int couner = 0;
@@ -161,6 +141,8 @@ namespace testVk
             if (progressBar1.Value >= 120)
             {
                 label1.Visible = true;
+                buttondeleted.Enabled = true;
+                button3.Enabled = true;
             }
         }
 
