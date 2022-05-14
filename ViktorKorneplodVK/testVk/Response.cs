@@ -74,6 +74,35 @@ namespace testVk
             public List<Item> items { get; set; }
         }
     }
+    //Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class LikeAllPhoto
+    {
+        public Response response { get; set; }
+        public class Item
+        {
+            public int album_id { get; set; }
+            public int date { get; set; }
+            public int id { get; set; }
+            public int owner_id { get; set; }
+            public int post_id { get; set; }
+            public List<Size> sizes { get; set; }
+            public string text { get; set; }
+            public bool has_tags { get; set; }
+            public double? lat { get; set; }
+            public double? @long { get; set; }
+        }
 
-
+        public class Response
+        {
+            public int count { get; set; }
+            public List<Item> items { get; set; }
+        }
+        public class Size
+        {
+            public int height { get; set; }
+            public string url { get; set; }
+            public string type { get; set; }
+            public int width { get; set; }
+        }
+    }
 }

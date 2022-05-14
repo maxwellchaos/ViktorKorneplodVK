@@ -107,5 +107,12 @@ namespace testVk
             frm.access_token = this.access_token;
             frm.Show();
         }
+
+        private void LikePhotoFriend_Click(object sender, EventArgs e)
+        {
+            LikePhotoFriend lpf = new LikePhotoFriend();
+            lpf.access_token = this.access_token;
+            lpf.Show();
+        }
     }
 }
