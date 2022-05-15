@@ -105,4 +105,15 @@ namespace testVk
             public int width { get; set; }
         }
     }
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class Like
+    {
+        public Response response { get; set; }
+        public class Response
+        {
+            public int likes { get; set; }
+        }
+
+    }
+
 }

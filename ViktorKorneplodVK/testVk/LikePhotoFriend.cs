@@ -31,13 +31,6 @@ namespace testVk
                    + "&v=5.131"
                    ));
             friendList friends = JsonConvert.DeserializeObject<friendList>(answer);
-            string getphoto = Encoding.UTF8.GetString(client.DownloadData(
-                   "https://api.vk.com/method/photos.getAll?"
-                   + "owner_id=56929156&"
-                   + access_token
-                   + "&v=5.131"
-                   ));
-            LikeAllPhoto photos = JsonConvert.DeserializeObject<LikeAllPhoto>(getphoto);
             foreach (friendList.Item friend in friends.response.items)
             {
                 string[] subItems = new string[3];
@@ -46,18 +39,44 @@ namespace testVk
                 ListViewItem lvi = new ListViewItem(subItems);
                 listView1.Items.Add(lvi);
             }
-            foreach (LikeAllPhoto.Item photo in photos.response.items)
-            { 
-
-            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            WebClient client = new WebClient();
             if (listView1.SelectedItems.Count > 0)
             {
                 label1.Text = listView1.SelectedItems[0].Text;
 
+                //textBox1PhotoFriend.Text = listView1.SelectedItems[2].Text;
+                string request = "https://api.vk.com/method/photos.getAll?"
+                 + "owner_id=" + listView1.SelectedItems[0].SubItems[1].Text + "&"
+                 + access_token
+                 + "&v=5.131";
+                string getphoto = Encoding.UTF8.GetString(client.DownloadData(request));
+                //string like = "https://api.vk.com/method/likes.add?"
+                //+ "type=photo&"
+                //+ "owner_id=56929156&"
+                //+ "item_id=457242080&"
+                //+ access_token
+                //+ "&v=5.131";
+                //string likes = Encoding.UTF8.GetString(client.DownloadData(like));
+                LikeAllPhoto photos = JsonConvert.DeserializeObject<LikeAllPhoto>(getphoto);
+                foreach (LikeAllPhoto.Item photo in photos.response.items)
+                {
+                    string[] subItems = new string[3];
+                    subItems[2] = photo.id.ToString();
+                    ListViewItem lvi = new ListViewItem(subItems);
+                    listView1.Items.Add(lvi);
+                    
+                    string like = "https://api.vk.com/method/likes.add?"
+                    + "type=photo&"
+                    + "owner_id=" + listView1.SelectedItems[0].SubItems[1].Text + "&"
+                    + "item_id="+ photo.id.ToString() + "&"
+                    + access_token
+                    + "&v=5.131";
+                    string likes = Encoding.UTF8.GetString(client.DownloadData(like));
+                }
             }
         }
     }

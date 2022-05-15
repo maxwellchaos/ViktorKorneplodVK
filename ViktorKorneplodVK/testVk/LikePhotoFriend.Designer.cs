@@ -34,6 +34,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1PhotoFriend = new System.Windows.Forms.TextBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonfriend
@@ -50,11 +51,12 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader1});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(279, 69);
+            this.listView1.Location = new System.Drawing.Point(228, 69);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(256, 292);
+            this.listView1.Size = new System.Drawing.Size(347, 292);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -79,11 +81,15 @@
             // 
             // textBox1PhotoFriend
             // 
-            this.textBox1PhotoFriend.Location = new System.Drawing.Point(555, 69);
+            this.textBox1PhotoFriend.Location = new System.Drawing.Point(581, 69);
             this.textBox1PhotoFriend.Multiline = true;
             this.textBox1PhotoFriend.Name = "textBox1PhotoFriend";
             this.textBox1PhotoFriend.Size = new System.Drawing.Size(261, 292);
             this.textBox1PhotoFriend.TabIndex = 6;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Width = 112;
             // 
             // LikePhotoFriend
             // 
@@ -108,5 +114,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1PhotoFriend;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

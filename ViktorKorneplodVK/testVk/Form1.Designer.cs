@@ -47,8 +47,8 @@ namespace testVk
             this.StartWebBrowser.Size = new System.Drawing.Size(345, 294);
             this.StartWebBrowser.TabIndex = 2;
             this.StartWebBrowser.Url = new System.Uri("https://oauth.vk.com/authorize?client_id=8104769&display=page&redirect_uri=https:" +
-        "//oauth.vk.com/blank.html&scope=friends+stories+photos&response_type=token&v=5.1" +
-        "31&state=123456", System.UriKind.Absolute);
+        "//oauth.vk.com/blank.html&scope=friends+stories+photos+wall&response_type=token&" +
+        "v=5.131&state=123456", System.UriKind.Absolute);
             this.StartWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // AccessTokenTextBox
