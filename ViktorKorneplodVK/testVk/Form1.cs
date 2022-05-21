@@ -106,6 +106,12 @@ namespace testVk
             FormLikePostOnPeoplesWall frm = new FormLikePostOnPeoplesWall();
             frm.access_token = this.access_token;
             frm.Show();
+
+            for(int i = 0; i < 300; i++)
+            {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(10);
+            }
         }
     }
 }

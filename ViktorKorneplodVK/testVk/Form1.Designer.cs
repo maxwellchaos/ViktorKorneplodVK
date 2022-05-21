@@ -40,42 +40,38 @@ namespace testVk
             // 
             // StartWebBrowser
             // 
-            this.StartWebBrowser.Location = new System.Drawing.Point(624, 38);
-            this.StartWebBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.StartWebBrowser.MinimumSize = new System.Drawing.Size(27, 25);
+            this.StartWebBrowser.Location = new System.Drawing.Point(468, 31);
+            this.StartWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.StartWebBrowser.Name = "StartWebBrowser";
-            this.StartWebBrowser.Size = new System.Drawing.Size(460, 362);
+            this.StartWebBrowser.Size = new System.Drawing.Size(345, 294);
             this.StartWebBrowser.TabIndex = 2;
             this.StartWebBrowser.Url = new System.Uri("https://oauth.vk.com/authorize?client_id=8104769&display=page&redirect_uri=https:" +
-        "//oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.131&state=123456" +
-        "", System.UriKind.Absolute);
+        "//oauth.vk.com/blank.html&scope=friends+wall&response_type=token&v=5.131&state=1" +
+        "23456", System.UriKind.Absolute);
             this.StartWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // AccessTokenTextBox
             // 
-            this.AccessTokenTextBox.Location = new System.Drawing.Point(16, 439);
-            this.AccessTokenTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AccessTokenTextBox.Location = new System.Drawing.Point(12, 357);
             this.AccessTokenTextBox.Name = "AccessTokenTextBox";
-            this.AccessTokenTextBox.Size = new System.Drawing.Size(1049, 22);
+            this.AccessTokenTextBox.Size = new System.Drawing.Size(788, 20);
             this.AccessTokenTextBox.TabIndex = 3;
             // 
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LastNameLabel.Location = new System.Drawing.Point(31, 38);
-            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LastNameLabel.Location = new System.Drawing.Point(23, 31);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(109, 39);
+            this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "label1";
             // 
             // AvatarPictureBox
             // 
-            this.AvatarPictureBox.Location = new System.Drawing.Point(399, 38);
-            this.AvatarPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AvatarPictureBox.Location = new System.Drawing.Point(299, 31);
             this.AvatarPictureBox.Name = "AvatarPictureBox";
-            this.AvatarPictureBox.Size = new System.Drawing.Size(183, 172);
+            this.AvatarPictureBox.Size = new System.Drawing.Size(137, 140);
             this.AvatarPictureBox.TabIndex = 5;
             this.AvatarPictureBox.TabStop = false;
             // 
@@ -83,19 +79,19 @@ namespace testVk
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(31, 94);
-            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FirstNameLabel.Location = new System.Drawing.Point(23, 76);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(109, 39);
+            this.FirstNameLabel.Size = new System.Drawing.Size(86, 31);
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
             // 
             // buttonLikePostOnPeoplesWall
             // 
             this.buttonLikePostOnPeoplesWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(217, 39);
+            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(163, 32);
+            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLikePostOnPeoplesWall.Name = "buttonLikePostOnPeoplesWall";
-            this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(139, 51);
+            this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(104, 41);
             this.buttonLikePostOnPeoplesWall.TabIndex = 7;
             this.buttonLikePostOnPeoplesWall.Text = "лайкер постов на стене человека";
             this.buttonLikePostOnPeoplesWall.UseVisualStyleBackColor = true;
@@ -103,16 +99,15 @@ namespace testVk
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 482);
+            this.ClientSize = new System.Drawing.Size(840, 392);
             this.Controls.Add(this.buttonLikePostOnPeoplesWall);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.AccessTokenTextBox);
             this.Controls.Add(this.StartWebBrowser);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Виктор Корнеплод VK";
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).EndInit();
