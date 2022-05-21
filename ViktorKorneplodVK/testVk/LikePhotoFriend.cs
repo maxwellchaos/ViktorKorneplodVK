@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -44,6 +45,12 @@ namespace testVk
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
+            for (int i = 0; i < 100; i++)
+            {
+                Application.DoEvents();
+                Thread.Sleep(10);
+                Application.DoEvents();
+            }
             if (listView1.SelectedItems.Count > 0)
             {
                 label1.Text = listView1.SelectedItems[0].Text;
@@ -78,6 +85,22 @@ namespace testVk
                     string likes = Encoding.UTF8.GetString(client.DownloadData(like));
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int pos = textBox1.Text.LastIndexOf("/");
+            string screenName = textBox1.Text.Remove(0, pos + 1);
+
+            WebClient client = new WebClient();
+            string request = "https://api.vk.com/method/utils.resolveScreenName?screen_name="
+                + screenName + "&"
+                + access_token
+                + "&v=5.131";
+            string answer = Encoding.UTF8.GetString(client.DownloadData(request));
+
+            ResolveScreenName VKObject = JsonConvert.DeserializeObject<ResolveScreenName>(answer);
+            label2.Text = VKObject.response.object_id.ToString();
         }
     }
 }
