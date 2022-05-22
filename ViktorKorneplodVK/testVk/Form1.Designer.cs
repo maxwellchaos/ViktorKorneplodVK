@@ -34,6 +34,7 @@ namespace testVk
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.AvatarPictureBox = new System.Windows.Forms.PictureBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.FantekriBotHelper = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +85,22 @@ namespace testVk
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
             // 
+            // FantekriBotHelper
+            // 
+            this.FantekriBotHelper.Location = new System.Drawing.Point(12, 139);
+            this.FantekriBotHelper.Name = "FantekriBotHelper";
+            this.FantekriBotHelper.Size = new System.Drawing.Size(145, 55);
+            this.FantekriBotHelper.TabIndex = 7;
+            this.FantekriBotHelper.Text = "Советчик";
+            this.FantekriBotHelper.UseVisualStyleBackColor = true;
+            this.FantekriBotHelper.Click += new System.EventHandler(this.FantekriBotHelper_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 392);
+            this.Controls.Add(this.FantekriBotHelper);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
             this.Controls.Add(this.LastNameLabel);
@@ -108,6 +120,7 @@ namespace testVk
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.PictureBox AvatarPictureBox;
         private System.Windows.Forms.Label FirstNameLabel;
+        private System.Windows.Forms.Button FantekriBotHelper;
     }
 }
 
