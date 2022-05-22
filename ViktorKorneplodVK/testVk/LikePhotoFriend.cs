@@ -24,9 +24,24 @@ namespace testVk
 
         private void buttonfriend_Click(object sender, EventArgs e)
         {
+            int pos = textBox1.Text.LastIndexOf("/");
+            string screenName = textBox1.Text.Remove(0, pos + 1);
+
             WebClient client = new WebClient();
-            string answer = Encoding.UTF8.GetString(client.DownloadData(
+            string request = "https://api.vk.com/method/utils.resolveScreenName?screen_name="
+                + screenName + "&"
+                + access_token
+                + "&v=5.131";
+            string answer = Encoding.UTF8.GetString(client.DownloadData(request));
+
+            ResolveScreenName VKObject = JsonConvert.DeserializeObject<ResolveScreenName>(answer);
+             textBox1.Text = VKObject.response.object_id.ToString();
+
+            string userid = VKObject.response.object_id.ToString();
+            client = new WebClient();
+            answer = Encoding.UTF8.GetString(client.DownloadData(
                    "https://api.vk.com/method/friends.get?"
+                   + "user_id=" + textBox1.Text + "&"
                    + "fields=bdate&"
                    + access_token
                    + "&v=5.131"
@@ -45,16 +60,8 @@ namespace testVk
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
-            for (int i = 0; i < 100; i++)
-            {
-                Application.DoEvents();
-                Thread.Sleep(10);
-                Application.DoEvents();
-            }
             if (listView1.SelectedItems.Count > 0)
             {
-                label1.Text = listView1.SelectedItems[0].Text;
-
                 //textBox1PhotoFriend.Text = listView1.SelectedItems[2].Text;
                 string request = "https://api.vk.com/method/photos.getAll?"
                  + "owner_id=" + listView1.SelectedItems[0].SubItems[1].Text + "&"
@@ -71,6 +78,12 @@ namespace testVk
                 LikeAllPhoto photos = JsonConvert.DeserializeObject<LikeAllPhoto>(getphoto);
                 foreach (LikeAllPhoto.Item photo in photos.response.items)
                 {
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Application.DoEvents();
+                        Thread.Sleep(10);
+                        Application.DoEvents();
+                    }
                     string[] subItems = new string[3];
                     subItems[2] = photo.id.ToString();
                     ListViewItem lvi = new ListViewItem(subItems);
@@ -100,7 +113,7 @@ namespace testVk
             string answer = Encoding.UTF8.GetString(client.DownloadData(request));
 
             ResolveScreenName VKObject = JsonConvert.DeserializeObject<ResolveScreenName>(answer);
-            label2.Text = VKObject.response.object_id.ToString();
+            //label2.Text = VKObject.response.object_id.ToString();
         }
     }
 }

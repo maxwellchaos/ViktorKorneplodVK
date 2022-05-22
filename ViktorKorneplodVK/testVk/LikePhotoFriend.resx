@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Чтобы функция лайканья друзей начала работу нужно: 1. Написать ссылку на аккаунт пользователя . 2. Нажать на кнопку "показать ID". 3. Нажать на кнопку "показать друзей". 4. В приведённом списке друзей выбераешь, которого хочешь пролайкать, нажимаешь на него, и его фотки автоматически лайкаются от твоего имени.</value>
+  </data>
 </root>
