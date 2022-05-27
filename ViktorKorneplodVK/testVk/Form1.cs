@@ -8,7 +8,7 @@ namespace testVk
 {
     public partial class MainForm : Form
     {
-        string access_token;
+        public string access_token;
         public MainForm()
         {
             InitializeComponent();
@@ -66,6 +66,7 @@ namespace testVk
                     + "&v=5.131"
                     ));
 
+
                 getProfileInfo userInfo =
                     JsonConvert.DeserializeObject<getProfileInfo>(answer);
 
@@ -99,6 +100,15 @@ namespace testVk
         private void button3_Click(object sender, EventArgs e)
         {
         
+        }
+
+        private void FantekriBotHelper_Click(object sender, EventArgs e)
+        {
+            FantekriFormHelper frm = new FantekriFormHelper();
+            this.Hide();
+            //frm.access_token = this.access_token;
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }
