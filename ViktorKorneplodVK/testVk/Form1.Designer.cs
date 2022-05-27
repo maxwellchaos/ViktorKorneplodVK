@@ -35,6 +35,8 @@ namespace testVk
             this.AvatarPictureBox = new System.Windows.Forms.PictureBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.FantekriBotHelper = new System.Windows.Forms.Button();
+            this.LikePhotoFriend = new System.Windows.Forms.Button();
+            this.DeletingBannedBlockedFriends = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +87,19 @@ namespace testVk
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
             // 
+<<<<<<< Updated upstream
+=======
+            // KommentPostovSoobButton
+            // 
+            this.KommentPostovSoobButton.Location = new System.Drawing.Point(12, 278);
+            this.KommentPostovSoobButton.Name = "KommentPostovSoobButton";
+            this.KommentPostovSoobButton.Size = new System.Drawing.Size(120, 34);
+            this.KommentPostovSoobButton.TabIndex = 7;
+            this.KommentPostovSoobButton.Text = "Комментарии к постам сообщества";
+            this.KommentPostovSoobButton.UseVisualStyleBackColor = true;
+            this.KommentPostovSoobButton.Click += new System.EventHandler(this.KommentPostovSoobButton_Click);
+            // 
+>>>>>>> Stashed changes
             // FantekriBotHelper
             // 
             this.FantekriBotHelper.Location = new System.Drawing.Point(12, 139);
@@ -95,11 +110,37 @@ namespace testVk
             this.FantekriBotHelper.UseVisualStyleBackColor = true;
             this.FantekriBotHelper.Click += new System.EventHandler(this.FantekriBotHelper_Click);
             // 
+            // LikePhotoFriend
+            // 
+            this.LikePhotoFriend.Location = new System.Drawing.Point(211, 258);
+            this.LikePhotoFriend.Name = "LikePhotoFriend";
+            this.LikePhotoFriend.Size = new System.Drawing.Size(175, 40);
+            this.LikePhotoFriend.TabIndex = 10;
+            this.LikePhotoFriend.Text = "лайкать фотографии друга";
+            this.LikePhotoFriend.UseVisualStyleBackColor = true;
+            this.LikePhotoFriend.Click += new System.EventHandler(this.LikePhotoFriend_Click);
+            // 
+            // DeletingBannedBlockedFriends
+            // 
+            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(210, 184);
+            this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
+            this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(176, 52);
+            this.DeletingBannedBlockedFriends.TabIndex = 9;
+            this.DeletingBannedBlockedFriends.Text = "удаление из друзей заблокированных/забанненых";
+            this.DeletingBannedBlockedFriends.UseVisualStyleBackColor = true;
+            this.DeletingBannedBlockedFriends.Click += new System.EventHandler(this.DeletingBannedBlockedFriends_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 392);
+<<<<<<< Updated upstream
+=======
+            this.Controls.Add(this.LikePhotoFriend);
+            this.Controls.Add(this.DeletingBannedBlockedFriends);
+            this.Controls.Add(this.KommentPostovSoobButton);
+>>>>>>> Stashed changes
             this.Controls.Add(this.FantekriBotHelper);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
@@ -121,6 +162,8 @@ namespace testVk
         private System.Windows.Forms.PictureBox AvatarPictureBox;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Button FantekriBotHelper;
+        private System.Windows.Forms.Button LikePhotoFriend;
+        private System.Windows.Forms.Button DeletingBannedBlockedFriends;
     }
 }
 
