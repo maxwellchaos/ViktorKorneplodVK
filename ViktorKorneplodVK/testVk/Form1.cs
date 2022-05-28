@@ -102,22 +102,6 @@ namespace testVk
         
         }
 
-<<<<<<< Updated upstream
-=======
-        private void LastNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void KommentPostovSoobButton_Click(object sender, EventArgs e)
-        {
-            //Вызов KommentPostovSoobForm(Комментарии к постам сообщества)
-            FormCommentPostovSoob frm = new FormCommentPostovSoob();
-            frm.access_token = this.access_token;
-            frm.Show();
-        }
-        
->>>>>>> Stashed changes
         private void FantekriBotHelper_Click(object sender, EventArgs e)
         {
             FantekriFormHelper frm = new FantekriFormHelper();
@@ -125,6 +109,14 @@ namespace testVk
             //frm.access_token = this.access_token;
             frm.ShowDialog();
             this.Show();
+        }
+
+        private void buttonPostOnStrangeWall_Click(object sender, EventArgs e)
+        {
+            //Вызов второрй формы
+            FormCommentPostovSoob frm = new FormCommentPostovSoob();
+            frm.access_token = this.access_token;
+            frm.Show();
         }
 
         private void DeletingBannedBlockedFriends_Click(object sender, EventArgs e)
