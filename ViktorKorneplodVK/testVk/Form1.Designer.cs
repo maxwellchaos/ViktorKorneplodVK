@@ -46,8 +46,8 @@ namespace testVk
             this.StartWebBrowser.Size = new System.Drawing.Size(345, 294);
             this.StartWebBrowser.TabIndex = 2;
             this.StartWebBrowser.Url = new System.Uri("https://oauth.vk.com/authorize?client_id=8104769&display=page&redirect_uri=https:" +
-        "//oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.131&state=123456" +
-        "", System.UriKind.Absolute);
+        "//oauth.vk.com/blank.html&scope=friends+wall&response_type=token&v=5.131&state=1" +
+        "23456", System.UriKind.Absolute);
             this.StartWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // AccessTokenTextBox
@@ -66,6 +66,7 @@ namespace testVk
             this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "label1";
+            this.LastNameLabel.Click += new System.EventHandler(this.LastNameLabel_Click);
             // 
             // AvatarPictureBox
             // 
@@ -109,6 +110,7 @@ namespace testVk
             this.Controls.Add(this.StartWebBrowser);
             this.Name = "MainForm";
             this.Text = "Виктор Корнеплод VK";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
