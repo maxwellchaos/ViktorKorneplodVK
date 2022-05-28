@@ -55,7 +55,7 @@ namespace testVk
                    ));
             friendList friends = JsonConvert.DeserializeObject<friendList>(answer);
             int couner = 0;
-            progressBar1.Maximum = 10;
+            progressBar1.Maximum = friends.response.count;
             progressBar1.Value = 0;
             int k = 0;
             label1.Visible = false;
@@ -79,13 +79,9 @@ namespace testVk
                     + access_token
                     + "&v=5.131";
                     delete = Encoding.UTF8.GetString(client.DownloadData(request));
-                    if (couner > 2)
-                    {
-                        break;
-                    }
                 }
             }
-            if (progressBar1.Value >= 2)
+            if (progressBar1.Value >= 3)
             {
                 label2.Visible = true;
                 buttondeleted.Enabled = true;
@@ -108,7 +104,7 @@ namespace testVk
             //textBox1.Text = List.response.bdate;
             //friends.response.count 
             label2.Visible = false;
-            progressBar1.Maximum = 1000;
+            progressBar1.Maximum = friends.response.items.Count;
             progressBar1.Value = 0;
             int k = 0;
             buttondeleted.Enabled = false;
@@ -138,7 +134,7 @@ namespace testVk
                     }
                 }
             }
-            if (progressBar1.Value >= 120)
+            if (progressBar1.Value >= 10)
             {
                 label1.Visible = true;
                 buttondeleted.Enabled = true;

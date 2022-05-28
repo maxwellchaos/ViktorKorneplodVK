@@ -115,5 +115,10 @@ namespace testVk
             ResolveScreenName VKObject = JsonConvert.DeserializeObject<ResolveScreenName>(answer);
             //label2.Text = VKObject.response.object_id.ToString();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
