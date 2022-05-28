@@ -49,12 +49,12 @@ namespace testVk
             // 
             this.TakeLike.BackColor = System.Drawing.Color.White;
             this.TakeLike.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TakeLike.Location = new System.Drawing.Point(15, 11);
+            this.TakeLike.Location = new System.Drawing.Point(36, 217);
             this.TakeLike.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TakeLike.Name = "TakeLike";
             this.TakeLike.Size = new System.Drawing.Size(113, 65);
             this.TakeLike.TabIndex = 1;
-            this.TakeLike.Text = "Поставить лайк";
+            this.TakeLike.Text = "Поставить лайки";
             this.TakeLike.UseVisualStyleBackColor = false;
             this.TakeLike.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -62,7 +62,7 @@ namespace testVk
             // 
             this.likesYN.AutoSize = true;
             this.likesYN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.likesYN.Location = new System.Drawing.Point(-1, 96);
+            this.likesYN.Location = new System.Drawing.Point(1, 81);
             this.likesYN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.likesYN.Name = "likesYN";
             this.likesYN.Size = new System.Drawing.Size(22, 31);
@@ -73,7 +73,7 @@ namespace testVk
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxID.Location = new System.Drawing.Point(242, 210);
+            this.textBoxID.Location = new System.Drawing.Point(248, 25);
             this.textBoxID.Multiline = true;
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(383, 29);
@@ -84,7 +84,7 @@ namespace testVk
             // 
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelID.Location = new System.Drawing.Point(10, 210);
+            this.labelID.Location = new System.Drawing.Point(12, 25);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(209, 29);
             this.labelID.TabIndex = 6;
