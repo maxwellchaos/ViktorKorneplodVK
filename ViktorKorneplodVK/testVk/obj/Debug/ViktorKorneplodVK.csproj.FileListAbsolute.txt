@@ -32,3 +32,4 @@ C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\bin\Deb
 C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\bin\Debug\Newtonsoft.Json.dll
 C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\bin\Debug\Newtonsoft.Json.xml
 C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.CopyComplete
+C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.AssemblyReference.cache

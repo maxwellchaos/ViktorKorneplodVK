@@ -40,15 +40,17 @@ namespace testVk
             this.LikePhotoFriend = new System.Windows.Forms.Button();
             this.buttonLikePostOnPeoplesWall = new System.Windows.Forms.Button();
             this.Likebutton = new System.Windows.Forms.Button();
+            this.ViktorPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // StartWebBrowser
             // 
-            this.StartWebBrowser.Location = new System.Drawing.Point(468, 31);
+            this.StartWebBrowser.Location = new System.Drawing.Point(480, 12);
             this.StartWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.StartWebBrowser.Name = "StartWebBrowser";
-            this.StartWebBrowser.Size = new System.Drawing.Size(345, 294);
+            this.StartWebBrowser.Size = new System.Drawing.Size(107, 220);
             this.StartWebBrowser.TabIndex = 2;
             this.StartWebBrowser.Url = new System.Uri("https://oauth.vk.com/authorize?client_id=8104769&display=page&redirect_uri=https:" +
         "//oauth.vk.com/blank.html&scope=friends+stories+photos+wall&response_type=token&" +
@@ -59,7 +61,7 @@ namespace testVk
             // 
             this.AccessTokenTextBox.Location = new System.Drawing.Point(12, 357);
             this.AccessTokenTextBox.Name = "AccessTokenTextBox";
-            this.AccessTokenTextBox.Size = new System.Drawing.Size(788, 20);
+            this.AccessTokenTextBox.Size = new System.Drawing.Size(594, 20);
             this.AccessTokenTextBox.TabIndex = 3;
             // 
             // LastNameLabel
@@ -154,11 +156,21 @@ namespace testVk
             this.Likebutton.UseVisualStyleBackColor = true;
             this.Likebutton.Click += new System.EventHandler(this.Likebutton_Click);
             // 
+            // ViktorPictureBox
+            // 
+            this.ViktorPictureBox.Image = global::testVk.Properties.Resources.ВК;
+            this.ViktorPictureBox.Location = new System.Drawing.Point(480, 238);
+            this.ViktorPictureBox.Name = "ViktorPictureBox";
+            this.ViktorPictureBox.Size = new System.Drawing.Size(608, 408);
+            this.ViktorPictureBox.TabIndex = 9;
+            this.ViktorPictureBox.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 392);
+            this.ClientSize = new System.Drawing.Size(605, 405);
+            this.Controls.Add(this.ViktorPictureBox);
             this.Controls.Add(this.LikePhotoFriend);
             this.Controls.Add(this.DeletingBannedBlockedFriends);
             this.Controls.Add(this.buttonPostOnStrangeWall);
@@ -174,6 +186,7 @@ namespace testVk
             this.Text = "Виктор Корнеплод VK";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +204,7 @@ namespace testVk
         private System.Windows.Forms.Button LikePhotoFriend;
         private System.Windows.Forms.Button buttonLikePostOnPeoplesWall;
         private System.Windows.Forms.Button Likebutton;
+        private System.Windows.Forms.PictureBox ViktorPictureBox;
     }
 }
 

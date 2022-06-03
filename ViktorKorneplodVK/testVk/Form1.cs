@@ -44,6 +44,7 @@ namespace testVk
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            Application.DoEvents();
             string str;
             str = StartWebBrowser.Url.ToString();
             if (str.Contains("access_token"))
@@ -58,7 +59,7 @@ namespace testVk
                 access_token = access_token.Remove(0, SharpPos + 1);
 
                 AccessTokenTextBox.Text = access_token;
-
+                Application.DoEvents();
                 WebClient client = new WebClient();
                 string answer = Encoding.UTF8.GetString(client.DownloadData(
                     "https://api.vk.com/method/account.getProfileInfo?"
@@ -84,7 +85,16 @@ namespace testVk
                 LastNameLabel.Text = userInfo.response.last_name;
                 FirstNameLabel.Text = userInfo.response.first_name;
                 AvatarPictureBox.Load(avatar.response[0].photo_50);
+                ViktorPictureBox.Visible = false;
+                StartWebBrowser.Visible = false;
             }
+            else
+            {
+                ViktorPictureBox.Visible = false;
+                StartWebBrowser.BringToFront();
+                StartWebBrowser.Dock = DockStyle.Fill;
+            }
+
         }
 
         private void button1_Paint(object sender, PaintEventArgs e)
@@ -171,7 +181,7 @@ namespace testVk
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            ViktorPictureBox.Location = new System.Drawing.Point(0, 0);
 
         }
     }
