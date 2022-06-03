@@ -119,6 +119,7 @@ namespace testVk
             frm.Show();
         }
 
+
         private void DeletingBannedBlockedFriends_Click(object sender, EventArgs e)
         {
             FormDeletingBannedBlockedFriends frm = new FormDeletingBannedBlockedFriends();

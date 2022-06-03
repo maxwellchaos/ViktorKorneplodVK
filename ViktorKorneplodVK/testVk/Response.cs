@@ -49,6 +49,7 @@ namespace testVk
             public List<Item> items { get; set; }
         }
     }
+
     public class messages_getConversations
     {
         public Response response { get; set; }
@@ -376,8 +377,4 @@ namespace testVk
 
         public Response response { get; set; }
     }
-
-
-
-
 }

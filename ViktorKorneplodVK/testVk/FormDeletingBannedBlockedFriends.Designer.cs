@@ -35,19 +35,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(385, 24);
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(385, 38);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(389, 370);
+            this.textBox1.Size = new System.Drawing.Size(389, 356);
             this.textBox1.TabIndex = 3;
             // 
             // buttondeleted
             // 
-            this.buttondeleted.Location = new System.Drawing.Point(100, 208);
+            this.buttondeleted.Location = new System.Drawing.Point(67, 239);
             this.buttondeleted.Name = "buttondeleted";
             this.buttondeleted.Size = new System.Drawing.Size(128, 23);
             this.buttondeleted.TabIndex = 4;
@@ -57,7 +60,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(100, 179);
+            this.button3.Location = new System.Drawing.Point(67, 174);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 23);
             this.button3.TabIndex = 5;
@@ -67,9 +70,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 402);
+            this.progressBar1.Location = new System.Drawing.Point(12, 360);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(311, 23);
+            this.progressBar1.Size = new System.Drawing.Size(280, 23);
             this.progressBar1.TabIndex = 6;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
@@ -99,16 +102,36 @@
             this.textBox2.Location = new System.Drawing.Point(32, 24);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 76);
+            this.textBox2.Size = new System.Drawing.Size(196, 72);
             this.textBox2.TabIndex = 9;
             this.textBox2.Text = "Чтобы функция удаления забаненных друзей начала работу нужно: 1. Нажать на кнопку" +
-    " \"показать забаненных\". 2. Нажать на кнопку \"удалить забаненных\".";
+    " \"показать забаненных\". 2. Нажать на кнопку \"удалить забаненных\".\r\n\r\n\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(543, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Список друзей";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(97, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Инструкция:";
             // 
             // FormDeletingBannedBlockedFriends
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,5 +155,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
