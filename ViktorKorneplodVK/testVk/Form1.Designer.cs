@@ -92,21 +92,11 @@ namespace testVk
             this.FirstNameLabel.Text = "label1";
             this.FirstNameLabel.Click += new System.EventHandler(this.FirstNameLabel_Click);
             // 
-            // Likebutton
-            // 
-            this.Likebutton.Location = new System.Drawing.Point(29, 110);
-            this.Likebutton.Name = "Likebutton";
-            this.Likebutton.Size = new System.Drawing.Size(122, 35);
-            this.Likebutton.TabIndex = 7;
-            this.Likebutton.Text = "лайкер фото на стене сообщества";
-            this.Likebutton.UseVisualStyleBackColor = true;
-            this.Likebutton.Click += new System.EventHandler(this.Likebutton_Click);
-            // 
             // FantekriBotHelper
             // 
-            this.FantekriBotHelper.Location = new System.Drawing.Point(12, 139);
+            this.FantekriBotHelper.Location = new System.Drawing.Point(202, 311);
             this.FantekriBotHelper.Name = "FantekriBotHelper";
-            this.FantekriBotHelper.Size = new System.Drawing.Size(145, 55);
+            this.FantekriBotHelper.Size = new System.Drawing.Size(155, 40);
             this.FantekriBotHelper.TabIndex = 7;
             this.FantekriBotHelper.Text = "Советчик";
             this.FantekriBotHelper.UseVisualStyleBackColor = true;
@@ -114,9 +104,9 @@ namespace testVk
             // 
             // buttonPostOnStrangeWall
             // 
-            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(12, 200);
+            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(12, 193);
             this.buttonPostOnStrangeWall.Name = "buttonPostOnStrangeWall";
-            this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(145, 62);
+            this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(175, 55);
             this.buttonPostOnStrangeWall.TabIndex = 8;
             this.buttonPostOnStrangeWall.Text = "Комментарии к постам в сообществах";
             this.buttonPostOnStrangeWall.UseVisualStyleBackColor = true;
@@ -124,15 +114,7 @@ namespace testVk
             // 
             // DeletingBannedBlockedFriends
             // 
-            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(184, 139);
-            this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
-            this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(132, 55);
-            this.DeletingBannedBlockedFriends.TabIndex = 9;
-            this.DeletingBannedBlockedFriends.Text = "Удалить заблокированных друзей";
-            //
-            // DeletingBannedBlockedFriends
-            // 
-            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(12, 131);
+            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(11, 254);
             this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
             this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(176, 52);
             this.DeletingBannedBlockedFriends.TabIndex = 7;
@@ -142,25 +124,35 @@ namespace testVk
             // 
             // LikePhotoFriend
             // 
-            this.LikePhotoFriend.Location = new System.Drawing.Point(13, 205);
+            this.LikePhotoFriend.Location = new System.Drawing.Point(12, 311);
             this.LikePhotoFriend.Name = "LikePhotoFriend";
             this.LikePhotoFriend.Size = new System.Drawing.Size(175, 40);
             this.LikePhotoFriend.TabIndex = 8;
             this.LikePhotoFriend.Text = "лайкать фотографии друга";
             this.LikePhotoFriend.UseVisualStyleBackColor = true;
             this.LikePhotoFriend.Click += new System.EventHandler(this.LikePhotoFriend_Click);
-            //
+            // 
             // buttonLikePostOnPeoplesWall
             // 
             this.buttonLikePostOnPeoplesWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(163, 32);
-            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(202, 254);
+            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLikePostOnPeoplesWall.Name = "buttonLikePostOnPeoplesWall";
-            this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(104, 41);
+            this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(155, 52);
             this.buttonLikePostOnPeoplesWall.TabIndex = 7;
             this.buttonLikePostOnPeoplesWall.Text = "лайкер постов на стене человека";
             this.buttonLikePostOnPeoplesWall.UseVisualStyleBackColor = true;
             this.buttonLikePostOnPeoplesWall.Click += new System.EventHandler(this.buttonLikePostOnPeoplesWall_Click);
+            // 
+            // Likebutton
+            // 
+            this.Likebutton.Location = new System.Drawing.Point(12, 139);
+            this.Likebutton.Name = "Likebutton";
+            this.Likebutton.Size = new System.Drawing.Size(175, 48);
+            this.Likebutton.TabIndex = 7;
+            this.Likebutton.Text = "лайкер фото на стене сообщества";
+            this.Likebutton.UseVisualStyleBackColor = true;
+            this.Likebutton.Click += new System.EventHandler(this.Likebutton_Click);
             // 
             // MainForm
             // 
