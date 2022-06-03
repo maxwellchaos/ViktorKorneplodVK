@@ -39,6 +39,7 @@ namespace testVk
             this.DeletingBannedBlockedFriends = new System.Windows.Forms.Button();
             this.LikePhotoFriend = new System.Windows.Forms.Button();
             this.buttonLikePostOnPeoplesWall = new System.Windows.Forms.Button();
+            this.Likebutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +71,7 @@ namespace testVk
             this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "label1";
+            this.LastNameLabel.Click += new System.EventHandler(this.LastNameLabel_Click);
             // 
             // AvatarPictureBox
             // 
@@ -88,6 +90,17 @@ namespace testVk
             this.FirstNameLabel.Size = new System.Drawing.Size(86, 31);
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
+            this.FirstNameLabel.Click += new System.EventHandler(this.FirstNameLabel_Click);
+            // 
+            // Likebutton
+            // 
+            this.Likebutton.Location = new System.Drawing.Point(29, 110);
+            this.Likebutton.Name = "Likebutton";
+            this.Likebutton.Size = new System.Drawing.Size(122, 35);
+            this.Likebutton.TabIndex = 7;
+            this.Likebutton.Text = "лайкер фото на стене сообщества";
+            this.Likebutton.UseVisualStyleBackColor = true;
+            this.Likebutton.Click += new System.EventHandler(this.Likebutton_Click);
             // 
             // FantekriBotHelper
             // 
@@ -159,6 +172,7 @@ namespace testVk
             this.Controls.Add(this.buttonPostOnStrangeWall);
             this.Controls.Add(this.FantekriBotHelper);
             this.Controls.Add(this.buttonLikePostOnPeoplesWall);
+            this.Controls.Add(this.Likebutton);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
             this.Controls.Add(this.LastNameLabel);
@@ -166,6 +180,7 @@ namespace testVk
             this.Controls.Add(this.StartWebBrowser);
             this.Name = "MainForm";
             this.Text = "Виктор Корнеплод VK";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,6 +198,7 @@ namespace testVk
         private System.Windows.Forms.Button DeletingBannedBlockedFriends;
         private System.Windows.Forms.Button LikePhotoFriend;
         private System.Windows.Forms.Button buttonLikePostOnPeoplesWall;
+        private System.Windows.Forms.Button Likebutton;
     }
 }
 

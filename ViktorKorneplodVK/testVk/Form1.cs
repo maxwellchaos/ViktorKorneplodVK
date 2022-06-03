@@ -140,11 +140,38 @@ namespace testVk
             frm.access_token = this.access_token;
             frm.Show();
 
-            for(int i = 0; i < 300; i++)
+            for (int i = 0; i < 300; i++)
             {
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(10);
             }
+        }
+        private void FirstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Likebutton_Click(object sender, EventArgs e)
+        {
+            LikeForm frm = new LikeForm();
+            frm.access_token = this.access_token;
+            frm.Show();
+            
+        }
+
+        private void LastNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
 
         }
     }
