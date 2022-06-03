@@ -8,7 +8,7 @@ namespace testVk
 {
     public partial class MainForm : Form
     {
-        string access_token;
+        public string access_token;
         public MainForm()
         {
             InitializeComponent();
@@ -66,6 +66,7 @@ namespace testVk
                     + "&v=5.131"
                     ));
 
+
                 getProfileInfo userInfo =
                     JsonConvert.DeserializeObject<getProfileInfo>(answer);
 
@@ -101,17 +102,35 @@ namespace testVk
         
         }
 
-        private void LastNameLabel_Click(object sender, EventArgs e)
+        private void FantekriBotHelper_Click(object sender, EventArgs e)
         {
-
+            FantekriFormHelper frm = new FantekriFormHelper();
+            this.Hide();
+            //frm.access_token = this.access_token;
+            frm.ShowDialog();
+            this.Show();
         }
 
-        private void KommentPostovSoobButton_Click(object sender, EventArgs e)
+        private void buttonPostOnStrangeWall_Click(object sender, EventArgs e)
         {
-            //Вызов KommentPostovSoobForm(Комментарии к постам сообщества)
-            KommentPostovSoobForm frm = new KommentPostovSoobForm();
+            //Вызов второрй формы
+            FormCommentPostovSoob frm = new FormCommentPostovSoob();
             frm.access_token = this.access_token;
             frm.Show();
+        }
+
+        private void DeletingBannedBlockedFriends_Click(object sender, EventArgs e)
+        {
+            FormDeletingBannedBlockedFriends frm = new FormDeletingBannedBlockedFriends();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
+
+        private void LikePhotoFriend_Click(object sender, EventArgs e)
+        {
+            LikePhotoFriend lpf = new LikePhotoFriend();
+            lpf.access_token = this.access_token;
+            lpf.Show();
         }
     }
 }

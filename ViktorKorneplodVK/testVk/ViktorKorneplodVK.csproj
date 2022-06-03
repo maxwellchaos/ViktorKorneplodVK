@@ -50,26 +50,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantekriFormHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FantekriFormHelper.Designer.cs">
+      <DependentUpon>FantekriFormHelper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="KommentPostovSoobForm.cs">
+    <Compile Include="FormCommentPostovSoob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KommentPostovSoobForm.Designer.cs">
-      <DependentUpon>KommentPostovSoobForm.cs</DependentUpon>
+    <Compile Include="FormCommentPostovSoob.Designer.cs">
+      <DependentUpon>FormCommentPostovSoob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeletingBannedBlockedFriends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeletingBannedBlockedFriends.Designer.cs">
+      <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LikePhotoFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LikePhotoFriend.Designer.cs">
+      <DependentUpon>LikePhotoFriend.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response.cs" />
+    <EmbeddedResource Include="FantekriFormHelper.resx">
+      <DependentUpon>FantekriFormHelper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KommentPostovSoobForm.resx">
-      <DependentUpon>KommentPostovSoobForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormCommentPostovSoob.resx">
+      <DependentUpon>FormCommentPostovSoob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeletingBannedBlockedFriends.resx">
+      <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LikePhotoFriend.resx">
+      <DependentUpon>LikePhotoFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

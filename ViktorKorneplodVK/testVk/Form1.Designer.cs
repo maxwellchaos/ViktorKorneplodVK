@@ -34,7 +34,10 @@ namespace testVk
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.AvatarPictureBox = new System.Windows.Forms.PictureBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
-            this.KommentPostovSoobButton = new System.Windows.Forms.Button();
+            this.FantekriBotHelper = new System.Windows.Forms.Button();
+            this.buttonPostOnStrangeWall = new System.Windows.Forms.Button();
+            this.DeletingBannedBlockedFriends = new System.Windows.Forms.Button();
+            this.LikePhotoFriend = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,8 +49,8 @@ namespace testVk
             this.StartWebBrowser.Size = new System.Drawing.Size(345, 294);
             this.StartWebBrowser.TabIndex = 2;
             this.StartWebBrowser.Url = new System.Uri("https://oauth.vk.com/authorize?client_id=8104769&display=page&redirect_uri=https:" +
-        "//oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.131&state=123456" +
-        "", System.UriKind.Absolute);
+        "//oauth.vk.com/blank.html&scope=friends+wall+photos&response_type=token&v=5.131&" +
+        "state=123456", System.UriKind.Absolute);
             this.StartWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // AccessTokenTextBox
@@ -66,7 +69,6 @@ namespace testVk
             this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "label1";
-            this.LastNameLabel.Click += new System.EventHandler(this.LastNameLabel_Click);
             // 
             // AvatarPictureBox
             // 
@@ -86,22 +88,55 @@ namespace testVk
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
             // 
-            // KommentPostovSoobButton
+            // FantekriBotHelper
             // 
-            this.KommentPostovSoobButton.Location = new System.Drawing.Point(12, 278);
-            this.KommentPostovSoobButton.Name = "KommentPostovSoobButton";
-            this.KommentPostovSoobButton.Size = new System.Drawing.Size(120, 34);
-            this.KommentPostovSoobButton.TabIndex = 7;
-            this.KommentPostovSoobButton.Text = "Комментарии к постам сообщества";
-            this.KommentPostovSoobButton.UseVisualStyleBackColor = true;
-            this.KommentPostovSoobButton.Click += new System.EventHandler(this.KommentPostovSoobButton_Click);
+            this.FantekriBotHelper.Location = new System.Drawing.Point(12, 139);
+            this.FantekriBotHelper.Name = "FantekriBotHelper";
+            this.FantekriBotHelper.Size = new System.Drawing.Size(145, 55);
+            this.FantekriBotHelper.TabIndex = 7;
+            this.FantekriBotHelper.Text = "Советчик";
+            this.FantekriBotHelper.UseVisualStyleBackColor = true;
+            this.FantekriBotHelper.Click += new System.EventHandler(this.FantekriBotHelper_Click);
+            // 
+            // buttonPostOnStrangeWall
+            // 
+            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(12, 200);
+            this.buttonPostOnStrangeWall.Name = "buttonPostOnStrangeWall";
+            this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(145, 62);
+            this.buttonPostOnStrangeWall.TabIndex = 8;
+            this.buttonPostOnStrangeWall.Text = "Комментарии к постам в сообществах";
+            this.buttonPostOnStrangeWall.UseVisualStyleBackColor = true;
+            this.buttonPostOnStrangeWall.Click += new System.EventHandler(this.buttonPostOnStrangeWall_Click);
+            // 
+            // DeletingBannedBlockedFriends
+            // 
+            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(184, 139);
+            this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
+            this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(132, 55);
+            this.DeletingBannedBlockedFriends.TabIndex = 9;
+            this.DeletingBannedBlockedFriends.Text = "Удалить заблокированных друзей";
+            this.DeletingBannedBlockedFriends.UseVisualStyleBackColor = true;
+            this.DeletingBannedBlockedFriends.Click += new System.EventHandler(this.DeletingBannedBlockedFriends_Click);
+            // 
+            // LikePhotoFriend
+            // 
+            this.LikePhotoFriend.Location = new System.Drawing.Point(184, 200);
+            this.LikePhotoFriend.Name = "LikePhotoFriend";
+            this.LikePhotoFriend.Size = new System.Drawing.Size(132, 62);
+            this.LikePhotoFriend.TabIndex = 10;
+            this.LikePhotoFriend.Text = "Лайкать фотки друзей";
+            this.LikePhotoFriend.UseVisualStyleBackColor = true;
+            this.LikePhotoFriend.Click += new System.EventHandler(this.LikePhotoFriend_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 392);
-            this.Controls.Add(this.KommentPostovSoobButton);
+            this.Controls.Add(this.LikePhotoFriend);
+            this.Controls.Add(this.DeletingBannedBlockedFriends);
+            this.Controls.Add(this.buttonPostOnStrangeWall);
+            this.Controls.Add(this.FantekriBotHelper);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.AvatarPictureBox);
             this.Controls.Add(this.LastNameLabel);
@@ -121,7 +156,10 @@ namespace testVk
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.PictureBox AvatarPictureBox;
         private System.Windows.Forms.Label FirstNameLabel;
-        private System.Windows.Forms.Button KommentPostovSoobButton;
+        private System.Windows.Forms.Button FantekriBotHelper;
+        private System.Windows.Forms.Button buttonPostOnStrangeWall;
+        private System.Windows.Forms.Button DeletingBannedBlockedFriends;
+        private System.Windows.Forms.Button LikePhotoFriend;
     }
 }
 
