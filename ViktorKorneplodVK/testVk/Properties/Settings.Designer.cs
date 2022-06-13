@@ -226,5 +226,17 @@ namespace testVk.Properties {
                 this["OtvetNa2p_3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Groop {
+            get {
+                return ((string)(this["Groop"]));
+            }
+            set {
+                this["Groop"] = value;
+            }
+        }
     }
 }

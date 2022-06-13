@@ -144,6 +144,11 @@ namespace testVk
             public int random_id { get; set; }
             public string text { get; set; }
             public int? update_time { get; set; }
+
+            internal bool Contains(string v)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         public class Response
