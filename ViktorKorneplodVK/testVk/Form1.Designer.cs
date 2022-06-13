@@ -36,6 +36,7 @@ namespace testVk
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.DeletingBannedBlockedFriends = new System.Windows.Forms.Button();
             this.LikePhotoFriend = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,11 +107,22 @@ namespace testVk
             this.LikePhotoFriend.UseVisualStyleBackColor = true;
             this.LikePhotoFriend.Click += new System.EventHandler(this.LikePhotoFriend_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "кидать заявки друзьям друзей";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 392);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LikePhotoFriend);
             this.Controls.Add(this.DeletingBannedBlockedFriends);
             this.Controls.Add(this.FirstNameLabel);
@@ -134,6 +146,7 @@ namespace testVk
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Button DeletingBannedBlockedFriends;
         private System.Windows.Forms.Button LikePhotoFriend;
+        private System.Windows.Forms.Button button1;
     }
 }
 
