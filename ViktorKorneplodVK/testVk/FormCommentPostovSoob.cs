@@ -19,6 +19,7 @@ namespace testVk
         public string IDTextBox;
         public int errors;
         public int success;
+        Random rnd = new Random();
         public FormCommentPostovSoob()
         {
             InitializeComponent();
@@ -30,6 +31,8 @@ namespace testVk
         }
         private void buttonCreateComment_Click(object sender, EventArgs e)
         {
+            labelOtprava.Visible = true;
+            progressBarOjidaniya.Visible = true;
             if (textBoxInfoPosts.Text == "")
             {
                 labelOiOi.Visible = true;
@@ -37,6 +40,7 @@ namespace testVk
             WebClient client = new WebClient();
             for (int i = 0; i < textBoxInfoPosts.Lines.Length; i++)
             {
+                progressBarOjidaniya.Maximum = 20;
                 labelTextPoiska.Text = textBoxInfoPosts.Lines[i];
                 if (IDtextBoxPoisckID.Text == "")
                 {
@@ -44,32 +48,73 @@ namespace testVk
                 }
                 else
                 {
-                    string request = "https://api.vk.com/method/wall.search?owners_only=1&owner_id=-"
+                    try
+                    {
+                        string request = "https://api.vk.com/method/wall.search?owners_only=1&owner_id=-"
                                 + textBoxInfoPosts.Lines[i]
                                 + "&query="
-                                + IDtextBoxPoisckID.Text + "&"
-                                + access_token + "&v=5.131";
-                    string answer = Encoding.UTF8.GetString(client.DownloadData(request));
-                    WallPostsInfo infoPosts = JsonConvert.DeserializeObject<WallPostsInfo>(answer);
-                    foreach (WallPostsInfo.Item Post in infoPosts.response.items)
-                    {
-                        if(Post.post_type != "post")
+                                + IDtextBoxPoisckID.Text
+                                + "&" + access_token + "&v=5.131";
+                        string answer = Encoding.UTF8.GetString(client.DownloadData(request));
+                        WallPostsInfo infoPosts = JsonConvert.DeserializeObject<WallPostsInfo>(answer);
+                        progressBarOjidaniya.Value = i;
+                        Thread.Sleep(100);
+                        foreach (WallPostsInfo.Item Post in infoPosts.response.items)
                         {
-                            continue;
-                        }
-                        try
-                        {
-                            Application.DoEvents();
-                            Thread.Sleep(30000);
-                            request = "https://api.vk.com/method/wall.createComment?owner_id=-"
-                           + textBoxInfoPosts.Lines[i]
-                           + "&post_id="
-                           + Post.id
-                           + "&message="
-                           + textBoxCreateComment.Text + "&"
-                           + access_token
-                           + "&v=5.131";
+                            if (Post.post_type != "post")
+                            {
+                                continue;
+                            }
 
+                            Random rnd = new Random();
+                            int number;
+                            number = rnd.Next(3);
+                            if (number != 1)
+                            {
+                                int wait = 31000;
+                                for (int j = 0; j < wait/10; j++)
+                                {
+                                Application.DoEvents();
+                                Thread.Sleep(10);
+                                }
+                                string an;
+                                an = CreatComm(Post.id);
+                            }
+                            else
+                            {
+                                int wait = 11000;
+                                for (int j = 0; j < wait / 10; j++)
+                                {
+                                    Application.DoEvents();
+                                    Thread.Sleep(10);
+                                }
+                                string an;
+                                an = CreatComm(Post.id);
+                            }
+
+                            number = rnd.Next(3);
+                            if (number != 1)
+                            {
+                                int wait = 18000;
+                                for (int j = 0; j < wait / 10; j++)
+                                {
+                                    Application.DoEvents();
+                                    Thread.Sleep(10);
+                                }
+                                string an;
+                                an = CreatComm(Post.id);
+                            }
+                            else
+                            {
+                                int wait = 9000;
+                                for (int j = 0; j < wait / 10; j++)
+                                {
+                                    Application.DoEvents();
+                                    Thread.Sleep(10);
+                                }
+                                string an;
+                                an = CreatComm(Post.id);
+                            }
                             //показ капчи
                             answer = Encoding.UTF8.GetString(client.DownloadData(request));
                             if (answer.Contains("Captcha needed"))
@@ -84,7 +129,7 @@ namespace testVk
                                 textBoxOiOiCaptcha.Text = "";
 
                                 //Это цикл ожидания ввода капчи и нажатия кнопки
-                                for (; panelOsnovaVsego.Visible == false; )
+                                for (; panelOsnovaVsego.Visible == false;)
                                 {
                                     Thread.Sleep(30);
                                     Application.DoEvents();
@@ -113,6 +158,7 @@ namespace testVk
                             if (answer.Contains("error"))
                             {
                                 errors = errors + 1;
+                                textBoxErrorAnsw.Text = textBoxErrorAnsw.Text + answer;
                             }
                             else
                             {
@@ -125,21 +171,47 @@ namespace testVk
                                 + "/"
                                 + errors.ToString();
                             Application.DoEvents();
+
+
+
                         }
-                        catch (Exception)
-                        {
-                            //вывод сообщения об ошибке, если нужно
-                        }
+                    }
+                    catch (Exception)
+                    {
+                        //вывод сообщения об ошибке, если нужно
                     }
                 }
             }
+            progressBarOjidaniya.Value = progressBarOjidaniya.Maximum;
+            if (progressBarOjidaniya.Value == progressBarOjidaniya.Maximum)
+            {
+                labelOtprava.Visible = false;
+                progressBarOjidaniya.Visible = false;
+            }
         }
+        private string CreatComm(int postid)
+        {
+            string request = "https://api.vk.com/method/wall.createComment?owner_id=-"
+             + textBoxInfoPosts.Lines
+             + "&post_id="
+             + "Post.id"+postid.ToString()
+             + "&message="
+             + textBoxCreateComment.Text + "&"
+             + access_token
+             + "&v=5.131";
+            WebClient client = new WebClient();
+            string answer;
+            answer = Encoding.UTF8.GetString(client.DownloadData(request));
+            return answer;
+        }
+
         private void buttonGroupsSearch_Click(object sender, EventArgs e)
         {
             labelOiOi.Visible = false;
             WebClient client = new WebClient();
             string request = "https://api.vk.com/method/groups.search?owner_id="
                 + IDTextBox
+                + "&count=100"
                 + "&q="
                 + IDtextBoxPoisckID.Text + "&"
                 + access_token + "&v=5.131";
@@ -160,6 +232,7 @@ namespace testVk
                     textBoxInfoPosts.Text = textBoxInfoPosts.Text + Post.id.ToString() + "\r\n";
                 }
             }
+            textBoxInfoPosts.Text = textBoxInfoPosts.Text.Remove(textBoxInfoPosts.Text.Length - 4);
         }
         private void buttonGGWPCaptcha_Click(object sender, EventArgs e)
         {

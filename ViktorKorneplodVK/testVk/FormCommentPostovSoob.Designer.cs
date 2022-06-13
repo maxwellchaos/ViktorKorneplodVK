@@ -46,10 +46,11 @@ namespace testVk
             this.labelOiOiCaptcha = new System.Windows.Forms.Label();
             this.textBoxOiOiCaptcha = new System.Windows.Forms.TextBox();
             this.panelOiOiCaptcha = new System.Windows.Forms.Panel();
-            this.panelOsnovaVsego = new System.Windows.Forms.Panel();
             this.buttonGGWPCaptcha = new System.Windows.Forms.Button();
-            this.labelHelloPeepl = new System.Windows.Forms.Label();
+            this.panelOsnovaVsego = new System.Windows.Forms.Panel();
+            this.textBoxErrorAnsw = new System.Windows.Forms.TextBox();
             this.labelPoiskGrup = new System.Windows.Forms.Label();
+            this.labelHelloPeepl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOiOiCaptcha)).BeginInit();
             this.panelOiOiCaptcha.SuspendLayout();
             this.panelOsnovaVsego.SuspendLayout();
@@ -60,26 +61,26 @@ namespace testVk
             this.labelAccessTok.AutoSize = true;
             this.labelAccessTok.Location = new System.Drawing.Point(1, 542);
             this.labelAccessTok.Name = "labelAccessTok";
-            this.labelAccessTok.Size = new System.Drawing.Size(35, 13);
+            this.labelAccessTok.Size = new System.Drawing.Size(0, 13);
             this.labelAccessTok.TabIndex = 0;
-            this.labelAccessTok.Text = "label1";
             this.labelAccessTok.Visible = false;
             // 
             // textBoxInfoPosts
             // 
             this.textBoxInfoPosts.BackColor = System.Drawing.Color.White;
-            this.textBoxInfoPosts.Enabled = false;
             this.textBoxInfoPosts.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxInfoPosts.Location = new System.Drawing.Point(643, 45);
+            this.textBoxInfoPosts.Location = new System.Drawing.Point(705, 45);
             this.textBoxInfoPosts.Multiline = true;
             this.textBoxInfoPosts.Name = "textBoxInfoPosts";
-            this.textBoxInfoPosts.Size = new System.Drawing.Size(257, 316);
+            this.textBoxInfoPosts.ReadOnly = true;
+            this.textBoxInfoPosts.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxInfoPosts.Size = new System.Drawing.Size(195, 521);
             this.textBoxInfoPosts.TabIndex = 2;
             // 
             // textBoxCreateComment
             // 
             this.textBoxCreateComment.BackColor = System.Drawing.Color.White;
-            this.textBoxCreateComment.Location = new System.Drawing.Point(367, 425);
+            this.textBoxCreateComment.Location = new System.Drawing.Point(4, 447);
             this.textBoxCreateComment.Multiline = true;
             this.textBoxCreateComment.Name = "textBoxCreateComment";
             this.textBoxCreateComment.Size = new System.Drawing.Size(533, 130);
@@ -90,7 +91,7 @@ namespace testVk
             this.buttonCreateComment.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonCreateComment.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCreateComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonCreateComment.Location = new System.Drawing.Point(205, 499);
+            this.buttonCreateComment.Location = new System.Drawing.Point(543, 521);
             this.buttonCreateComment.Name = "buttonCreateComment";
             this.buttonCreateComment.Size = new System.Drawing.Size(156, 56);
             this.buttonCreateComment.TabIndex = 4;
@@ -136,7 +137,7 @@ namespace testVk
             this.ErrorAndSuccessLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ErrorAndSuccessLabel.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ErrorAndSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ErrorAndSuccessLabel.Location = new System.Drawing.Point(317, 253);
+            this.ErrorAndSuccessLabel.Location = new System.Drawing.Point(12, 330);
             this.ErrorAndSuccessLabel.Name = "ErrorAndSuccessLabel";
             this.ErrorAndSuccessLabel.Size = new System.Drawing.Size(0, 20);
             this.ErrorAndSuccessLabel.TabIndex = 9;
@@ -147,7 +148,7 @@ namespace testVk
             this.labelOne.BackColor = System.Drawing.Color.Black;
             this.labelOne.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelOne.ForeColor = System.Drawing.Color.Yellow;
-            this.labelOne.Location = new System.Drawing.Point(362, 375);
+            this.labelOne.Location = new System.Drawing.Point(3, 418);
             this.labelOne.Name = "labelOne";
             this.labelOne.Size = new System.Drawing.Size(493, 26);
             this.labelOne.TabIndex = 10;
@@ -158,20 +159,22 @@ namespace testVk
             this.labelRofls.AutoSize = true;
             this.labelRofls.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRofls.ForeColor = System.Drawing.Color.Black;
-            this.labelRofls.Location = new System.Drawing.Point(316, 48);
+            this.labelRofls.Location = new System.Drawing.Point(369, 48);
             this.labelRofls.Name = "labelRofls";
-            this.labelRofls.Size = new System.Drawing.Size(321, 60);
+            this.labelRofls.Size = new System.Drawing.Size(330, 60);
             this.labelRofls.TabIndex = 11;
-            this.labelRofls.Text = "Не обращяйте внимания просто айдишники.\r\nПри желание можно пройти по ним,\r\nи узна" +
-    "ть информацию о сообществе.\r\n";
+            this.labelRofls.Text = "Не обращяйте внимания просто айдишники.>\r\nПри желание можно пройти по ним,       " +
+    "             >\r\nи узнать информацию о сообществе.                  >\r\n";
             // 
             // progressBarOjidaniya
             // 
             this.progressBarOjidaniya.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.progressBarOjidaniya.Location = new System.Drawing.Point(3, 274);
+            this.progressBarOjidaniya.Maximum = 20;
             this.progressBarOjidaniya.Name = "progressBarOjidaniya";
             this.progressBarOjidaniya.Size = new System.Drawing.Size(293, 23);
             this.progressBarOjidaniya.TabIndex = 12;
+            this.progressBarOjidaniya.Visible = false;
             // 
             // labelOtprava
             // 
@@ -184,18 +187,19 @@ namespace testVk
             this.labelOtprava.Size = new System.Drawing.Size(293, 23);
             this.labelOtprava.TabIndex = 13;
             this.labelOtprava.Text = "Идёт отправка сообщений ждите.";
+            this.labelOtprava.Visible = false;
             // 
             // labelOiOi
             // 
             this.labelOiOi.AutoSize = true;
             this.labelOiOi.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelOiOi.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelOiOi.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelOiOi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelOiOi.Location = new System.Drawing.Point(7, 324);
+            this.labelOiOi.Location = new System.Drawing.Point(543, 338);
             this.labelOiOi.Name = "labelOiOi";
-            this.labelOiOi.Size = new System.Drawing.Size(354, 172);
+            this.labelOiOi.Size = new System.Drawing.Size(376, 180);
             this.labelOiOi.TabIndex = 14;
-            this.labelOiOi.Text = "_________________\r\nОй Ой вы не получили\r\nайди сообществ!\r\n_________________";
+            this.labelOiOi.Text = "_________________\r\nОй Ой вы не получили\r\nай ди сообществ!\r\n_________________";
             this.labelOiOi.Visible = false;
             // 
             // pictureBoxOiOiCaptcha
@@ -237,9 +241,23 @@ namespace testVk
             this.panelOiOiCaptcha.Size = new System.Drawing.Size(334, 254);
             this.panelOiOiCaptcha.TabIndex = 18;
             // 
+            // buttonGGWPCaptcha
+            // 
+            this.buttonGGWPCaptcha.BackColor = System.Drawing.Color.Black;
+            this.buttonGGWPCaptcha.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonGGWPCaptcha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonGGWPCaptcha.Location = new System.Drawing.Point(202, 166);
+            this.buttonGGWPCaptcha.Name = "buttonGGWPCaptcha";
+            this.buttonGGWPCaptcha.Size = new System.Drawing.Size(86, 30);
+            this.buttonGGWPCaptcha.TabIndex = 18;
+            this.buttonGGWPCaptcha.Text = "Отправить";
+            this.buttonGGWPCaptcha.UseVisualStyleBackColor = false;
+            this.buttonGGWPCaptcha.Click += new System.EventHandler(this.buttonGGWPCaptcha_Click);
+            // 
             // panelOsnovaVsego
             // 
             this.panelOsnovaVsego.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelOsnovaVsego.Controls.Add(this.textBoxErrorAnsw);
             this.panelOsnovaVsego.Controls.Add(this.labelPoiskGrup);
             this.panelOsnovaVsego.Controls.Add(this.labelHelloPeepl);
             this.panelOsnovaVsego.Controls.Add(this.labelTextPoiska);
@@ -260,18 +278,26 @@ namespace testVk
             this.panelOsnovaVsego.Size = new System.Drawing.Size(915, 580);
             this.panelOsnovaVsego.TabIndex = 19;
             // 
-            // buttonGGWPCaptcha
+            // textBoxErrorAnsw
             // 
-            this.buttonGGWPCaptcha.BackColor = System.Drawing.Color.Black;
-            this.buttonGGWPCaptcha.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonGGWPCaptcha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonGGWPCaptcha.Location = new System.Drawing.Point(202, 166);
-            this.buttonGGWPCaptcha.Name = "buttonGGWPCaptcha";
-            this.buttonGGWPCaptcha.Size = new System.Drawing.Size(86, 30);
-            this.buttonGGWPCaptcha.TabIndex = 18;
-            this.buttonGGWPCaptcha.Text = "Отправить";
-            this.buttonGGWPCaptcha.UseVisualStyleBackColor = false;
-            this.buttonGGWPCaptcha.Click += new System.EventHandler(this.buttonGGWPCaptcha_Click);
+            this.textBoxErrorAnsw.Location = new System.Drawing.Point(320, 187);
+            this.textBoxErrorAnsw.Multiline = true;
+            this.textBoxErrorAnsw.Name = "textBoxErrorAnsw";
+            this.textBoxErrorAnsw.Size = new System.Drawing.Size(357, 110);
+            this.textBoxErrorAnsw.TabIndex = 22;
+            this.textBoxErrorAnsw.Visible = false;
+            // 
+            // labelPoiskGrup
+            // 
+            this.labelPoiskGrup.AutoSize = true;
+            this.labelPoiskGrup.BackColor = System.Drawing.Color.Black;
+            this.labelPoiskGrup.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPoiskGrup.ForeColor = System.Drawing.Color.Yellow;
+            this.labelPoiskGrup.Location = new System.Drawing.Point(0, 70);
+            this.labelPoiskGrup.Name = "labelPoiskGrup";
+            this.labelPoiskGrup.Size = new System.Drawing.Size(202, 38);
+            this.labelPoiskGrup.TabIndex = 21;
+            this.labelPoiskGrup.Text = "Введите название\r\nнужной тематики сообществ.";
             // 
             // labelHelloPeepl
             // 
@@ -285,18 +311,6 @@ namespace testVk
             this.labelHelloPeepl.TabIndex = 20;
             this.labelHelloPeepl.Text = "Приветствую, данная програма поможет оставить немалое количество комментариев без" +
     " особых проблем!\r\n";
-            // 
-            // labelPoiskGrup
-            // 
-            this.labelPoiskGrup.AutoSize = true;
-            this.labelPoiskGrup.BackColor = System.Drawing.Color.Black;
-            this.labelPoiskGrup.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPoiskGrup.ForeColor = System.Drawing.Color.Yellow;
-            this.labelPoiskGrup.Location = new System.Drawing.Point(0, 70);
-            this.labelPoiskGrup.Name = "labelPoiskGrup";
-            this.labelPoiskGrup.Size = new System.Drawing.Size(202, 38);
-            this.labelPoiskGrup.TabIndex = 21;
-            this.labelPoiskGrup.Text = "Введите название\r\nнужной тематики сообществ.";
             // 
             // FormCommentPostovSoob
             // 
@@ -340,5 +354,6 @@ namespace testVk
         private System.Windows.Forms.Button buttonGGWPCaptcha;
         private System.Windows.Forms.Label labelHelloPeepl;
         private System.Windows.Forms.Label labelPoiskGrup;
+        private System.Windows.Forms.TextBox textBoxErrorAnsw;
     }
 }
