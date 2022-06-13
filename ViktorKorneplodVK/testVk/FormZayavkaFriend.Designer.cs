@@ -108,7 +108,7 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(30, 12);
+            this.textBox2.Location = new System.Drawing.Point(12, 13);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(208, 87);
