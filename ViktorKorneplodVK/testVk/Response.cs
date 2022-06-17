@@ -49,7 +49,7 @@ namespace testVk
             public List<Item> items { get; set; }
         }
     }
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+
 
     public class WallPosts
     {
@@ -201,7 +201,6 @@ namespace testVk
             public string type { get; set; }
         }
     }
-
 
     public class messages_getConversations
     {
@@ -419,8 +418,6 @@ namespace testVk
         public Response response { get; set; }
     }
 
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-
 
     public class CreateComment
     {
@@ -431,8 +428,6 @@ namespace testVk
         }
         public Response response { get; set; }
     }
-
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 
 
     public class GroupsSearch
@@ -524,6 +519,7 @@ namespace testVk
         }
 
     }
+
     public class posts
     {
         public Response response { get; set; }
@@ -747,5 +743,40 @@ namespace testVk
             public List<Item> items { get; set; }
         }
     }
+
+    public class ResolveScreenName
+    {
+        public class Response
+        {
+            public int object_id { get; set; }
+            public string type { get; set; }
+        }
+
+        public Response response { get; set; }
+    }
+
+
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class ComPostSoobCaptcha
+    {
+        public class Error
+        {
+            public int error_code { get; set; }
+            public string error_msg { get; set; }
+            public List<RequestParam> request_params { get; set; }
+            public string captcha_sid { get; set; }
+            public string captcha_img { get; set; }
+        }
+
+        public class RequestParam
+        {
+            public string key { get; set; }
+            public string value { get; set; }
+        }
+
+        public Error error { get; set; }
+    }
+
+
 
 }
