@@ -79,6 +79,12 @@
     <Compile Include="FormZayavkaFriend.Designer.cs">
       <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
     </Compile>
+    <Compile Include="frindsSuggestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frindsSuggestions.Designer.cs">
+      <DependentUpon>frindsSuggestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="LikePhotoFriend.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormZayavkaFriend.resx">
       <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frindsSuggestions.resx">
+      <DependentUpon>frindsSuggestions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LikePhotoFriend.resx">
       <DependentUpon>LikePhotoFriend.cs</DependentUpon>

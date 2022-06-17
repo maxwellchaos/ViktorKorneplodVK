@@ -191,5 +191,12 @@ namespace testVk
             fzf.access_token = this.access_token;
             fzf.Show();
         }
+        
+        private void friendsSuggestions_Click(object sender, EventArgs e)
+        {
+            frindsSuggestions frm = new frindsSuggestions();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
     }
 }

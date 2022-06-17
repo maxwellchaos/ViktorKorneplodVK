@@ -42,17 +42,18 @@ namespace testVk
             this.Likebutton = new System.Windows.Forms.Button();
             this.ViktorPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-
+            this.friendsSuggestions = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // StartWebBrowser
             // 
-            this.StartWebBrowser.Location = new System.Drawing.Point(480, 12);
-            this.StartWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.StartWebBrowser.Location = new System.Drawing.Point(640, 15);
+            this.StartWebBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StartWebBrowser.MinimumSize = new System.Drawing.Size(27, 25);
             this.StartWebBrowser.Name = "StartWebBrowser";
-            this.StartWebBrowser.Size = new System.Drawing.Size(107, 220);
+            this.StartWebBrowser.Size = new System.Drawing.Size(143, 271);
             this.StartWebBrowser.TabIndex = 2;
             this.StartWebBrowser.Url = new System.Uri("https://oauth.vk.com/authorize?client_id=8104769&display=page&redirect_uri=https:" +
         "//oauth.vk.com/blank.html&scope=friends+stories+photos+wall&response_type=token&" +
@@ -61,27 +62,30 @@ namespace testVk
             // 
             // AccessTokenTextBox
             // 
-            this.AccessTokenTextBox.Location = new System.Drawing.Point(12, 357);
+            this.AccessTokenTextBox.Location = new System.Drawing.Point(16, 439);
+            this.AccessTokenTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AccessTokenTextBox.Name = "AccessTokenTextBox";
-            this.AccessTokenTextBox.Size = new System.Drawing.Size(594, 20);
+            this.AccessTokenTextBox.Size = new System.Drawing.Size(791, 22);
             this.AccessTokenTextBox.TabIndex = 3;
             // 
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LastNameLabel.Location = new System.Drawing.Point(23, 31);
+            this.LastNameLabel.Location = new System.Drawing.Point(31, 38);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
+            this.LastNameLabel.Size = new System.Drawing.Size(109, 39);
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "label1";
             this.LastNameLabel.Click += new System.EventHandler(this.LastNameLabel_Click);
             // 
             // AvatarPictureBox
             // 
-            this.AvatarPictureBox.Location = new System.Drawing.Point(299, 31);
+            this.AvatarPictureBox.Location = new System.Drawing.Point(399, 38);
+            this.AvatarPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AvatarPictureBox.Name = "AvatarPictureBox";
-            this.AvatarPictureBox.Size = new System.Drawing.Size(137, 140);
+            this.AvatarPictureBox.Size = new System.Drawing.Size(183, 172);
             this.AvatarPictureBox.TabIndex = 5;
             this.AvatarPictureBox.TabStop = false;
             // 
@@ -89,18 +93,20 @@ namespace testVk
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(23, 76);
+            this.FirstNameLabel.Location = new System.Drawing.Point(31, 94);
+            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(86, 31);
+            this.FirstNameLabel.Size = new System.Drawing.Size(109, 39);
             this.FirstNameLabel.TabIndex = 6;
             this.FirstNameLabel.Text = "label1";
             this.FirstNameLabel.Click += new System.EventHandler(this.FirstNameLabel_Click);
             // 
             // FantekriBotHelper
             // 
-            this.FantekriBotHelper.Location = new System.Drawing.Point(202, 311);
+            this.FantekriBotHelper.Location = new System.Drawing.Point(269, 383);
+            this.FantekriBotHelper.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FantekriBotHelper.Name = "FantekriBotHelper";
-            this.FantekriBotHelper.Size = new System.Drawing.Size(155, 40);
+            this.FantekriBotHelper.Size = new System.Drawing.Size(207, 49);
             this.FantekriBotHelper.TabIndex = 7;
             this.FantekriBotHelper.Text = "Советчик";
             this.FantekriBotHelper.UseVisualStyleBackColor = true;
@@ -108,9 +114,10 @@ namespace testVk
             // 
             // buttonPostOnStrangeWall
             // 
-            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(12, 193);
+            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(16, 238);
+            this.buttonPostOnStrangeWall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPostOnStrangeWall.Name = "buttonPostOnStrangeWall";
-            this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(175, 55);
+            this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(233, 68);
             this.buttonPostOnStrangeWall.TabIndex = 8;
             this.buttonPostOnStrangeWall.Text = "Комментарии к постам в сообществах";
             this.buttonPostOnStrangeWall.UseVisualStyleBackColor = true;
@@ -118,9 +125,10 @@ namespace testVk
             // 
             // DeletingBannedBlockedFriends
             // 
-            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(11, 254);
+            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(15, 313);
+            this.DeletingBannedBlockedFriends.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
-            this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(176, 52);
+            this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(235, 64);
             this.DeletingBannedBlockedFriends.TabIndex = 7;
             this.DeletingBannedBlockedFriends.Text = "удаление из друзей заблокированных/забанненых";
             this.DeletingBannedBlockedFriends.UseVisualStyleBackColor = true;
@@ -128,9 +136,10 @@ namespace testVk
             // 
             // LikePhotoFriend
             // 
-            this.LikePhotoFriend.Location = new System.Drawing.Point(12, 311);
+            this.LikePhotoFriend.Location = new System.Drawing.Point(16, 383);
+            this.LikePhotoFriend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LikePhotoFriend.Name = "LikePhotoFriend";
-            this.LikePhotoFriend.Size = new System.Drawing.Size(175, 40);
+            this.LikePhotoFriend.Size = new System.Drawing.Size(233, 49);
             this.LikePhotoFriend.TabIndex = 8;
             this.LikePhotoFriend.Text = "лайкать фотографии друга";
             this.LikePhotoFriend.UseVisualStyleBackColor = true;
@@ -139,10 +148,10 @@ namespace testVk
             // buttonLikePostOnPeoplesWall
             // 
             this.buttonLikePostOnPeoplesWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(202, 254);
-            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(269, 313);
+            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLikePostOnPeoplesWall.Name = "buttonLikePostOnPeoplesWall";
-            this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(155, 52);
+            this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(207, 64);
             this.buttonLikePostOnPeoplesWall.TabIndex = 7;
             this.buttonLikePostOnPeoplesWall.Text = "лайкер постов на стене человека";
             this.buttonLikePostOnPeoplesWall.UseVisualStyleBackColor = true;
@@ -150,9 +159,10 @@ namespace testVk
             // 
             // Likebutton
             // 
-            this.Likebutton.Location = new System.Drawing.Point(12, 139);
+            this.Likebutton.Location = new System.Drawing.Point(16, 171);
+            this.Likebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Likebutton.Name = "Likebutton";
-            this.Likebutton.Size = new System.Drawing.Size(175, 48);
+            this.Likebutton.Size = new System.Drawing.Size(233, 59);
             this.Likebutton.TabIndex = 7;
             this.Likebutton.Text = "лайкер фото на стене сообщества";
             this.Likebutton.UseVisualStyleBackColor = true;
@@ -177,11 +187,24 @@ namespace testVk
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // friendsSuggestions
+            // 
+            this.friendsSuggestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.friendsSuggestions.Location = new System.Drawing.Point(269, 240);
+            this.friendsSuggestions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.friendsSuggestions.Name = "friendsSuggestions";
+            this.friendsSuggestions.Size = new System.Drawing.Size(207, 64);
+            this.friendsSuggestions.TabIndex = 10;
+            this.friendsSuggestions.Text = "добавляю рекомендованных друзей";
+            this.friendsSuggestions.UseVisualStyleBackColor = true;
+            this.friendsSuggestions.Click += new System.EventHandler(this.friendsSuggestions_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 405);
+            this.Controls.Add(this.friendsSuggestions);
             this.Controls.Add(this.ViktorPictureBox);
             this.Controls.Add(this.LikePhotoFriend);
             this.Controls.Add(this.DeletingBannedBlockedFriends);
@@ -194,6 +217,7 @@ namespace testVk
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.AccessTokenTextBox);
             this.Controls.Add(this.StartWebBrowser);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Виктор Корнеплод VK";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -218,6 +242,7 @@ namespace testVk
         private System.Windows.Forms.Button Likebutton;
         private System.Windows.Forms.PictureBox ViktorPictureBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button friendsSuggestions;
     }
 }
 
