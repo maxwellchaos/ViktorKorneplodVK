@@ -29,6 +29,7 @@ namespace testVk
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.StartWebBrowser = new System.Windows.Forms.WebBrowser();
             this.AccessTokenTextBox = new System.Windows.Forms.TextBox();
             this.LastNameLabel = new System.Windows.Forms.Label();
@@ -43,15 +44,19 @@ namespace testVk
             this.ViktorPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.friendsSuggestions = new System.Windows.Forms.Button();
+            this.checklicense = new System.Windows.Forms.CheckBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.GlavTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // StartWebBrowser
             // 
-            this.StartWebBrowser.Location = new System.Drawing.Point(640, 15);
-            this.StartWebBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.StartWebBrowser.MinimumSize = new System.Drawing.Size(27, 25);
+            this.StartWebBrowser.Location = new System.Drawing.Point(483, 21);
+            this.StartWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.StartWebBrowser.Name = "StartWebBrowser";
             this.StartWebBrowser.Size = new System.Drawing.Size(143, 271);
             this.StartWebBrowser.TabIndex = 2;
@@ -198,6 +203,51 @@ namespace testVk
             this.friendsSuggestions.Text = "добавляю рекомендованных друзей";
             this.friendsSuggestions.UseVisualStyleBackColor = true;
             this.friendsSuggestions.Click += new System.EventHandler(this.friendsSuggestions_Click);
+            //
+            // checklicense
+            // 
+            this.checklicense.AutoSize = true;
+            this.checklicense.Location = new System.Drawing.Point(149, 31);
+            this.checklicense.Name = "checklicense";
+            this.checklicense.Size = new System.Drawing.Size(59, 17);
+            this.checklicense.TabIndex = 57;
+            this.checklicense.Text = "license";
+            this.checklicense.UseVisualStyleBackColor = true;
+            this.checklicense.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(197, 177);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(265, 50);
+            this.textBox4.TabIndex = 58;
+            this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(197, 233);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(265, 50);
+            this.textBox5.TabIndex = 59;
+            this.textBox5.Visible = false;
+            // 
+            // GlavTimer
+            // 
+            this.GlavTimer.Enabled = true;
+            this.GlavTimer.Interval = 300;
+            this.GlavTimer.Tick += new System.EventHandler(this.GlavTimer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(32, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 31);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "label1";
             // 
             // MainForm
             // 
@@ -209,6 +259,11 @@ namespace testVk
             this.Controls.Add(this.LikePhotoFriend);
             this.Controls.Add(this.DeletingBannedBlockedFriends);
             this.Controls.Add(this.buttonPostOnStrangeWall);
+            this.ClientSize = new System.Drawing.Size(840, 392);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.checklicense);
             this.Controls.Add(this.FantekriBotHelper);
             this.Controls.Add(this.buttonLikePostOnPeoplesWall);
             this.Controls.Add(this.Likebutton);
@@ -243,6 +298,11 @@ namespace testVk
         private System.Windows.Forms.PictureBox ViktorPictureBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button friendsSuggestions;
+        private System.Windows.Forms.CheckBox checklicense;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Timer GlavTimer;
+        private System.Windows.Forms.Label label1;
     }
 }
 
