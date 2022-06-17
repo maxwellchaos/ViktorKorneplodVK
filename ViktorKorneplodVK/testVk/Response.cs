@@ -706,5 +706,19 @@ namespace testVk
             public int count { get; set; }
         }
     }
-
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class ZayavkaFriend
+    {
+        public int response { get; set; }
+    }
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class FriendStatus
+    {
+        public List<Response> response { get; set; }
+        public class Response
+        {
+            public int friend_status { get; set; }
+            public int user_id { get; set; }
+        }
+    }
 }

@@ -73,6 +73,12 @@
     <Compile Include="FormDeletingBannedBlockedFriends.Designer.cs">
       <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormZayavkaFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZayavkaFriend.Designer.cs">
+      <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
+    </Compile>
     <Compile Include="LikePhotoFriend.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeletingBannedBlockedFriends.resx">
       <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZayavkaFriend.resx">
+      <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LikePhotoFriend.resx">
       <DependentUpon>LikePhotoFriend.cs</DependentUpon>

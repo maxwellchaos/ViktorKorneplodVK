@@ -41,6 +41,8 @@ namespace testVk
             this.buttonLikePostOnPeoplesWall = new System.Windows.Forms.Button();
             this.Likebutton = new System.Windows.Forms.Button();
             this.ViktorPictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -164,6 +166,16 @@ namespace testVk
             this.ViktorPictureBox.Size = new System.Drawing.Size(608, 408);
             this.ViktorPictureBox.TabIndex = 9;
             this.ViktorPictureBox.TabStop = false;
+            //
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "кидать заявки друзьям друзей";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // MainForm
             // 
@@ -205,6 +217,7 @@ namespace testVk
         private System.Windows.Forms.Button buttonLikePostOnPeoplesWall;
         private System.Windows.Forms.Button Likebutton;
         private System.Windows.Forms.PictureBox ViktorPictureBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 
