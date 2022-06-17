@@ -19,6 +19,10 @@ namespace testVk
         public string IDTextBox;
         public int errors;
         public int success;
+        //Если false- Не ленцинзионная версия
+        //Если true- ЛЕЦЕНЦИЯ
+        public bool Licensed;
+
         Random rnd = new Random();
         public FormCommentPostovSoob()
         {
@@ -69,52 +73,107 @@ namespace testVk
                             Random rnd = new Random();
                             int number;
                             number = rnd.Next(3);
-                            if (number != 1)
+                            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                            if (Licensed == true)
                             {
-                                int wait = 31000;
-                                for (int j = 0; j < wait/10; j++)
+                                if (number != 1)
                                 {
-                                Application.DoEvents();
-                                Thread.Sleep(10);
+                                    int wait = 31000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
                                 }
-                                string an;
-                                an = CreatComm(Post.id);
-                            }
-                            else
-                            {
-                                int wait = 11000;
-                                for (int j = 0; j < wait / 10; j++)
+                                else
                                 {
-                                    Application.DoEvents();
-                                    Thread.Sleep(10);
+                                    int wait = 11000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
                                 }
-                                string an;
-                                an = CreatComm(Post.id);
-                            }
 
-                            number = rnd.Next(3);
-                            if (number != 1)
-                            {
-                                int wait = 18000;
-                                for (int j = 0; j < wait / 10; j++)
+                                number = rnd.Next(3);
+                                if (number != 1)
                                 {
-                                    Application.DoEvents();
-                                    Thread.Sleep(10);
+                                    int wait = 18000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
                                 }
-                                string an;
-                                an = CreatComm(Post.id);
+                                else
+                                {
+                                    int wait = 9000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
+                                }
                             }
+                            ///////////////////////////////////////////////////////////////////////////////////////////////////////
                             else
                             {
-                                int wait = 9000;
-                                for (int j = 0; j < wait / 10; j++)
+                                if (number != 1)
                                 {
-                                    Application.DoEvents();
-                                    Thread.Sleep(10);
+                                    int wait = 42000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
                                 }
-                                string an;
-                                an = CreatComm(Post.id);
+                                else
+                                {
+                                    int wait = 21000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
+                                }
+
+                                number = rnd.Next(3);
+                                if (number != 1)
+                                {
+                                    int wait = 28000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
+                                }
+                                else
+                                {
+                                    int wait = 19000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                    string an;
+                                    an = CreatComm(Post.id);
+                                }
                             }
+                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                             //показ капчи
                             answer = Encoding.UTF8.GetString(client.DownloadData(request));
                             if (answer.Contains("Captcha needed"))
@@ -188,6 +247,7 @@ namespace testVk
                 labelOtprava.Visible = false;
                 progressBarOjidaniya.Visible = false;
             }
+            buttonCreateComment.Enabled = false;
         }
         private string CreatComm(int postid)
         {
@@ -207,19 +267,30 @@ namespace testVk
 
         private void buttonGroupsSearch_Click(object sender, EventArgs e)
         {
-            labelOiOi.Visible = false;
-            WebClient client = new WebClient();
+            int count;
+            if (Licensed == true)
+            {
+                count = 100;
+                labelBetaVersions.Visible = false;
+            }
+            else
+            {
+                count = 2;
+                labelBetaVersions.Visible = true;
+            }
+                labelOiOi.Visible = false;
+                WebClient client = new WebClient();
             string request = "https://api.vk.com/method/groups.search?owner_id="
                 + IDTextBox
-                + "&count=100"
-                + "&q="
-                + IDtextBoxPoisckID.Text + "&"
-                + access_token + "&v=5.131";
-            string answer = Encoding.UTF8.GetString(client.DownloadData(request));
+                + "&count=" + count.ToString()
+                    + "&q="
+                    + IDtextBoxPoisckID.Text + "&"
+                    + access_token + "&v=5.131";
+                string answer = Encoding.UTF8.GetString(client.DownloadData(request));
 
-            answer = Encoding.UTF8.GetString(client.DownloadData(request));
-            GroupsSearch gropsInfo = JsonConvert.DeserializeObject<GroupsSearch>(answer);
-
+                answer = Encoding.UTF8.GetString(client.DownloadData(request));
+                GroupsSearch gropsInfo = JsonConvert.DeserializeObject<GroupsSearch>(answer);
+            
             if (IDtextBoxPoisckID.Text == "")
             {
 
@@ -233,6 +304,7 @@ namespace testVk
                 }
             }
             textBoxInfoPosts.Text = textBoxInfoPosts.Text.Remove(textBoxInfoPosts.Text.Length - 4);
+            buttonGroupsSearch.Enabled = false;
         }
         private void buttonGGWPCaptcha_Click(object sender, EventArgs e)
         {

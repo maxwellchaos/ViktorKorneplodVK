@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelBetaVersions.Text" xml:space="preserve">
+    <value>Здравствуйте, вы попали в бета версию(Комментариев к постам сообществ).
+Данная версия является бесплатной и по этому в этой версии доступно комментировать не более 2 сообществ.
+При покупки полной версии откроется возможность комментировать до 100 сообществ
+и промежуток между оставлением комментариев станет меньше.
+</value>
+  </data>
 </root>

@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="GlavTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Чтобы функция добавление в друзья друзей друга начала работу нужно: 1.Нажать на кнопку "Показать своих друзей". 2. Выбрать и нажать на своего друга из списка своих друзей. 3. Нажать на кнопку "Кинуть заявку".</value>
+  </data>
 </root>

@@ -74,11 +74,35 @@
     <Compile Include="FormDeletingBannedBlockedFriends.Designer.cs">
       <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormZayavkaFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZayavkaFriend.Designer.cs">
+      <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frindsSuggestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frindsSuggestions.Designer.cs">
+      <DependentUpon>frindsSuggestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="LikePhotoFriend.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LikePhotoFriend.Designer.cs">
       <DependentUpon>LikePhotoFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLikePostOnPeoplesWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLikePostOnPeoplesWall.Designer.cs">
+      <DependentUpon>FormLikePostOnPeoplesWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LikeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LikeForm.Designer.cs">
+      <DependentUpon>LikeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +119,18 @@
     <EmbeddedResource Include="FormDeletingBannedBlockedFriends.resx">
       <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormZayavkaFriend.resx">
+      <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frindsSuggestions.resx">
+      <DependentUpon>frindsSuggestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLikePostOnPeoplesWall.resx">
+      <DependentUpon>FormLikePostOnPeoplesWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LikeForm.resx">
+      <DependentUpon>LikeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LikePhotoFriend.resx">
       <DependentUpon>LikePhotoFriend.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,7 +142,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ВК.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
