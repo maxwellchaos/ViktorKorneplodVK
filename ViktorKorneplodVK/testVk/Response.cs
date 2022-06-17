@@ -744,18 +744,6 @@ namespace testVk
         }
     }
 
-    public class ResolveScreenName
-    {
-        public class Response
-        {
-            public int object_id { get; set; }
-            public string type { get; set; }
-        }
-
-        public Response response { get; set; }
-    }
-
-
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class ComPostSoobCaptcha
     {

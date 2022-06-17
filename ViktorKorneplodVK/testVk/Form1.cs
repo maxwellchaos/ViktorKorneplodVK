@@ -285,38 +285,13 @@ namespace testVk
             if (license == textBox4.Text)
             {
                 checklicense.Checked = true;
+                //label1.Text = "Незарегистрированная версия";
             }
-        }
+            else
+            {
+                label1.Text = "Незарегистрированная версия";
+            }
 
-        private void FantekriBotHelper_Click(object sender, EventArgs e)
-        {
-            FantekriFormHelper frm = new FantekriFormHelper();
-            this.Hide();
-            //frm.access_token = this.access_token;
-            frm.ShowDialog();
-            this.Show();
-        }
-
-        private void buttonPostOnStrangeWall_Click(object sender, EventArgs e)
-        {
-            //Вызов второрй формы
-            FormCommentPostovSoob frm = new FormCommentPostovSoob();
-            frm.access_token = this.access_token;
-            frm.Show();
-        }
-
-        private void DeletingBannedBlockedFriends_Click(object sender, EventArgs e)
-        {
-            FormDeletingBannedBlockedFriends frm = new FormDeletingBannedBlockedFriends();
-            frm.access_token = this.access_token;
-            frm.Show();
-        }
-
-        private void LikePhotoFriend_Click(object sender, EventArgs e)
-        {
-            LikePhotoFriend lpf = new LikePhotoFriend();
-            lpf.access_token = this.access_token;
-            lpf.Show();
         }
     }
 }

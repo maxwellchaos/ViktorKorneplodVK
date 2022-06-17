@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Downloads\Json130r1\Bin\net45\Newtonsoft.Json.dll</HintPath>
@@ -128,9 +125,6 @@
     <EmbeddedResource Include="frindsSuggestions.resx">
       <DependentUpon>frindsSuggestions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LikePhotoFriend.resx">
-      <DependentUpon>LikePhotoFriend.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLikePostOnPeoplesWall.resx">
       <DependentUpon>FormLikePostOnPeoplesWall.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +158,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
     <None Include="Resources\ВК.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
