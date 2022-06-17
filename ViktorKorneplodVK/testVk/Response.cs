@@ -371,5 +371,18 @@ namespace testVk
     {
         public int count { get; set; }
     }
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+  
 
+    public class groupName
+    {
+        public Response response { get; set; }
+        public class Response
+        {
+            public int object_id { get; set; }
+            public string type { get; set; }
+
+        }
+
+    }
 }

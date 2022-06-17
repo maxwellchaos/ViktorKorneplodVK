@@ -30,23 +30,48 @@ namespace testVk
 
         private void button1_Click(object sender, EventArgs e)
         {
-            WebClient client = new WebClient();
-            string request = "https://api.vk.com/method/wall.get?" + "owner_id="+textBox3.Text +"&"
+            string groupName = textBox3.Text;
+            int pos = textBox3.Text.LastIndexOf("/");
+            string screenName = textBox3.Text.Remove(0, pos + 1);
+            string GroupId;
+            WebClient client;
+            string answer;
+            string request;
+            if (!screenName.Contains("-"))
+            {
+                client = new WebClient();
+                request = "https://api.vk.com/method/utils.resolveScreenName?screen_name=" + screenName + "&" + access_token + "&v=5.131";
+                 answer = Encoding.UTF8.GetString(client.DownloadData(request));
+
+                groupName name = JsonConvert.DeserializeObject<groupName>(answer);
+                GroupId = "-"+name.response.object_id.ToString();
+
+            }
+            else
+            { GroupId = screenName; }
+            success = 0;
+            error = 0;
+
+             client = new WebClient();
+             request = "https://api.vk.com/method/wall.get?" + "owner_id="+ GroupId + "&"
                 + access_token
                 + "&v=5.131";
-            string answer = Encoding.UTF8.GetString(client.DownloadData(request));
+             answer = Encoding.UTF8.GetString(client.DownloadData(request));
             posts wallget = JsonConvert.DeserializeObject<posts>(answer);
-            
+            progressBar1.Value = 0;
             foreach (posts.Item wall in wallget.response.items)
             {
                 Application.DoEvents();
                 textBox1.Text = textBox1.Text + wall.text + " " + wall.id.ToString() + "\r\n";
                 request = "https://api.vk.com/method/likes.add?type=post&"
-                + "owner_id=" + textBox3.Text + "&"  
+                    //вставить owner_id!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                + "owner_id=" + GroupId + "&"  
                 + "item_id=" + wall.id.ToString() + "&"
                 + access_token
                 + "&v=5.131"; 
-                answer = Encoding.UTF8.GetString(client.DownloadData(request));
+                 answer = Encoding.UTF8.GetString(client.DownloadData(request));
+                progressBar1.Value = progressBar1.Value + 5;
+                
                 for(int j = 0; j < 100; j++)
                 {
                     Thread.Sleep(10);
@@ -59,13 +84,11 @@ namespace testVk
                else
                 {
                     success = success + 1;
+                    
                 }
                label1.Text = "оставлено лайков/ошибок: "+ success.ToString() +"/" + error.ToString();
-                int pos = textBox3.Text.LastIndexOf("/");
-                string screenName = textBox3.Text.Remove(0, pos+1);
-                    
             }
-            
+            progressBar1.Value = 100;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -84,6 +107,16 @@ namespace testVk
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }

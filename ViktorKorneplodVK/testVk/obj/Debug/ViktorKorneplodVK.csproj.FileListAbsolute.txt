@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.MainForm.resources
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.LikeForm.resources
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.Properties.Resources.resources
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.GenerateResource.cache
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\testVk.exe.config
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\testVk.exe
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\testVk.pdb
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.CopyComplete
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.exe
+C:\Users\user\Desktop\ViktorKorneplodVK-main\ViktorKorneplodVK\testVk\obj\Debug\testVk.pdb
