@@ -765,6 +765,16 @@ namespace testVk
         public Error error { get; set; }
     }
 
+    public class groupName
+    {
+        public Response response { get; set; }
+        public class Response
+        {
+            public int object_id { get; set; }
+            public string type { get; set; }
 
+        }
+
+    }
 
 }

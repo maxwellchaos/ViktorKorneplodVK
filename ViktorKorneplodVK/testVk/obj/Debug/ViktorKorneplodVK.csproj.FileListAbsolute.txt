@@ -33,3 +33,4 @@ C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\bin\Deb
 C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.CopyComplete
 C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\obj\Debug\testVk.FormZayavkaFriend.resources
 C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\obj\Debug\testVk.frindsSuggestions.resources
+C:\Users\usr\Documents\GitHub\ViktorKorneplodVK\ViktorKorneplodVK\testVk\obj\Debug\ViktorKorneplodVK.csproj.AssemblyReference.cache

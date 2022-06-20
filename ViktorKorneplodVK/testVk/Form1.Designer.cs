@@ -56,7 +56,7 @@ namespace testVk
             // StartWebBrowser
             // 
             this.StartWebBrowser.Location = new System.Drawing.Point(362, 17);
-            this.StartWebBrowser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartWebBrowser.Margin = new System.Windows.Forms.Padding(2);
             this.StartWebBrowser.MinimumSize = new System.Drawing.Size(15, 16);
             this.StartWebBrowser.Name = "StartWebBrowser";
             this.StartWebBrowser.Size = new System.Drawing.Size(107, 220);
@@ -72,12 +72,13 @@ namespace testVk
             this.AccessTokenTextBox.Name = "AccessTokenTextBox";
             this.AccessTokenTextBox.Size = new System.Drawing.Size(594, 20);
             this.AccessTokenTextBox.TabIndex = 3;
+            this.AccessTokenTextBox.Visible = false;
             // 
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LastNameLabel.Location = new System.Drawing.Point(32, 25);
+            this.LastNameLabel.Location = new System.Drawing.Point(12, 45);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(86, 31);
             this.LastNameLabel.TabIndex = 4;
@@ -86,7 +87,7 @@ namespace testVk
             // 
             // AvatarPictureBox
             // 
-            this.AvatarPictureBox.Location = new System.Drawing.Point(299, 31);
+            this.AvatarPictureBox.Location = new System.Drawing.Point(299, 76);
             this.AvatarPictureBox.Name = "AvatarPictureBox";
             this.AvatarPictureBox.Size = new System.Drawing.Size(137, 140);
             this.AvatarPictureBox.TabIndex = 5;
@@ -96,7 +97,7 @@ namespace testVk
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(23, 76);
+            this.FirstNameLabel.Location = new System.Drawing.Point(12, 76);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(86, 31);
             this.FirstNameLabel.TabIndex = 6;
@@ -105,7 +106,7 @@ namespace testVk
             // 
             // FantekriBotHelper
             // 
-            this.FantekriBotHelper.Location = new System.Drawing.Point(9, 113);
+            this.FantekriBotHelper.Location = new System.Drawing.Point(9, 128);
             this.FantekriBotHelper.Name = "FantekriBotHelper";
             this.FantekriBotHelper.Size = new System.Drawing.Size(109, 45);
             this.FantekriBotHelper.TabIndex = 7;
@@ -115,7 +116,7 @@ namespace testVk
             // 
             // buttonPostOnStrangeWall
             // 
-            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(9, 162);
+            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(9, 177);
             this.buttonPostOnStrangeWall.Name = "buttonPostOnStrangeWall";
             this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(109, 50);
             this.buttonPostOnStrangeWall.TabIndex = 8;
@@ -125,7 +126,7 @@ namespace testVk
             // 
             // DeletingBannedBlockedFriends
             // 
-            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(138, 113);
+            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(138, 128);
             this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
             this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(155, 45);
             this.DeletingBannedBlockedFriends.TabIndex = 9;
@@ -135,7 +136,7 @@ namespace testVk
             // 
             // LikePhotoFriend
             // 
-            this.LikePhotoFriend.Location = new System.Drawing.Point(138, 162);
+            this.LikePhotoFriend.Location = new System.Drawing.Point(138, 177);
             this.LikePhotoFriend.Name = "LikePhotoFriend";
             this.LikePhotoFriend.Size = new System.Drawing.Size(155, 50);
             this.LikePhotoFriend.TabIndex = 10;
@@ -146,8 +147,8 @@ namespace testVk
             // buttonLikePostOnPeoplesWall
             // 
             this.buttonLikePostOnPeoplesWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(9, 284);
-            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLikePostOnPeoplesWall.Location = new System.Drawing.Point(9, 282);
+            this.buttonLikePostOnPeoplesWall.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLikePostOnPeoplesWall.Name = "buttonLikePostOnPeoplesWall";
             this.buttonLikePostOnPeoplesWall.Size = new System.Drawing.Size(109, 52);
             this.buttonLikePostOnPeoplesWall.TabIndex = 7;
@@ -168,10 +169,10 @@ namespace testVk
             // ViktorPictureBox
             // 
             this.ViktorPictureBox.Image = global::testVk.Properties.Resources.ВК;
-            this.ViktorPictureBox.Location = new System.Drawing.Point(473, 133);
-            this.ViktorPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViktorPictureBox.Location = new System.Drawing.Point(532, 357);
+            this.ViktorPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ViktorPictureBox.Name = "ViktorPictureBox";
-            this.ViktorPictureBox.Size = new System.Drawing.Size(456, 332);
+            this.ViktorPictureBox.Size = new System.Drawing.Size(605, 400);
             this.ViktorPictureBox.TabIndex = 9;
             this.ViktorPictureBox.TabStop = false;
             // 
@@ -188,10 +189,10 @@ namespace testVk
             // friendsSuggestions
             // 
             this.friendsSuggestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.friendsSuggestions.Location = new System.Drawing.Point(138, 228);
-            this.friendsSuggestions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.friendsSuggestions.Location = new System.Drawing.Point(138, 230);
+            this.friendsSuggestions.Margin = new System.Windows.Forms.Padding(2);
             this.friendsSuggestions.Name = "friendsSuggestions";
-            this.friendsSuggestions.Size = new System.Drawing.Size(155, 52);
+            this.friendsSuggestions.Size = new System.Drawing.Size(155, 48);
             this.friendsSuggestions.TabIndex = 10;
             this.friendsSuggestions.Text = "добавляю рекомендованных друзей";
             this.friendsSuggestions.UseVisualStyleBackColor = true;
@@ -200,8 +201,8 @@ namespace testVk
             // checklicense
             // 
             this.checklicense.AutoSize = true;
-            this.checklicense.Location = new System.Drawing.Point(683, 76);
-            this.checklicense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checklicense.Location = new System.Drawing.Point(547, 133);
+            this.checklicense.Margin = new System.Windows.Forms.Padding(2);
             this.checklicense.Name = "checklicense";
             this.checklicense.Size = new System.Drawing.Size(59, 17);
             this.checklicense.TabIndex = 57;
@@ -212,7 +213,7 @@ namespace testVk
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(473, 31);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(200, 41);
@@ -222,7 +223,7 @@ namespace testVk
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(473, 88);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 41);
@@ -239,7 +240,7 @@ namespace testVk
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(253, -3);
+            this.label1.Location = new System.Drawing.Point(132, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 31);
@@ -250,7 +251,7 @@ namespace testVk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 406);
+            this.ClientSize = new System.Drawing.Size(604, 399);
             this.Controls.Add(this.ViktorPictureBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox5);
