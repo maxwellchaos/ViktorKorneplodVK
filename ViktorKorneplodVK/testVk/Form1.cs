@@ -135,6 +135,7 @@ namespace testVk
             FormCommentPostovSoob frm = new FormCommentPostovSoob();
             frm.access_token = this.access_token;
             frm.Show();
+            frm.Licensed = checklicense.Checked;
         }
 
 
@@ -285,7 +286,6 @@ namespace testVk
             if (license == textBox4.Text)
             {
                 checklicense.Checked = true;
-                //label1.Text = "Незарегистрированная версия";
             }
             else
             {

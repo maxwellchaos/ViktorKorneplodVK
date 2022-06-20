@@ -29,6 +29,7 @@ namespace testVk
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCommentPostovSoob));
             this.labelAccessTok = new System.Windows.Forms.Label();
             this.textBoxInfoPosts = new System.Windows.Forms.TextBox();
             this.textBoxCreateComment = new System.Windows.Forms.TextBox();
@@ -51,6 +52,8 @@ namespace testVk
             this.textBoxErrorAnsw = new System.Windows.Forms.TextBox();
             this.labelPoiskGrup = new System.Windows.Forms.Label();
             this.labelHelloPeepl = new System.Windows.Forms.Label();
+            this.labelBetaVersions = new System.Windows.Forms.Label();
+            this.labelSorry = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOiOiCaptcha)).BeginInit();
             this.panelOiOiCaptcha.SuspendLayout();
             this.panelOsnovaVsego.SuspendLayout();
@@ -232,13 +235,14 @@ namespace testVk
             // panelOiOiCaptcha
             // 
             this.panelOiOiCaptcha.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelOiOiCaptcha.Controls.Add(this.labelSorry);
             this.panelOiOiCaptcha.Controls.Add(this.buttonGGWPCaptcha);
             this.panelOiOiCaptcha.Controls.Add(this.pictureBoxOiOiCaptcha);
             this.panelOiOiCaptcha.Controls.Add(this.textBoxOiOiCaptcha);
             this.panelOiOiCaptcha.Controls.Add(this.labelOiOiCaptcha);
-            this.panelOiOiCaptcha.Location = new System.Drawing.Point(266, 162);
+            this.panelOiOiCaptcha.Location = new System.Drawing.Point(99, 160);
             this.panelOiOiCaptcha.Name = "panelOiOiCaptcha";
-            this.panelOiOiCaptcha.Size = new System.Drawing.Size(334, 254);
+            this.panelOiOiCaptcha.Size = new System.Drawing.Size(501, 256);
             this.panelOiOiCaptcha.TabIndex = 18;
             // 
             // buttonGGWPCaptcha
@@ -257,6 +261,7 @@ namespace testVk
             // panelOsnovaVsego
             // 
             this.panelOsnovaVsego.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelOsnovaVsego.Controls.Add(this.labelBetaVersions);
             this.panelOsnovaVsego.Controls.Add(this.textBoxErrorAnsw);
             this.panelOsnovaVsego.Controls.Add(this.labelPoiskGrup);
             this.panelOsnovaVsego.Controls.Add(this.labelHelloPeepl);
@@ -273,7 +278,7 @@ namespace testVk
             this.panelOsnovaVsego.Controls.Add(this.labelRofls);
             this.panelOsnovaVsego.Controls.Add(this.progressBarOjidaniya);
             this.panelOsnovaVsego.Controls.Add(this.labelOtprava);
-            this.panelOsnovaVsego.Location = new System.Drawing.Point(0, -2);
+            this.panelOsnovaVsego.Location = new System.Drawing.Point(0, 0);
             this.panelOsnovaVsego.Name = "panelOsnovaVsego";
             this.panelOsnovaVsego.Size = new System.Drawing.Size(915, 580);
             this.panelOsnovaVsego.TabIndex = 19;
@@ -311,6 +316,31 @@ namespace testVk
             this.labelHelloPeepl.TabIndex = 20;
             this.labelHelloPeepl.Text = "Приветствую, данная програма поможет оставить немалое количество комментариев без" +
     " особых проблем!\r\n";
+            // 
+            // labelBetaVersions
+            // 
+            this.labelBetaVersions.AutoSize = true;
+            this.labelBetaVersions.BackColor = System.Drawing.Color.Black;
+            this.labelBetaVersions.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBetaVersions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelBetaVersions.Location = new System.Drawing.Point(3, 191);
+            this.labelBetaVersions.Name = "labelBetaVersions";
+            this.labelBetaVersions.Size = new System.Drawing.Size(686, 76);
+            this.labelBetaVersions.TabIndex = 23;
+            this.labelBetaVersions.Text = resources.GetString("labelBetaVersions.Text");
+            this.labelBetaVersions.Visible = false;
+            // 
+            // labelSorry
+            // 
+            this.labelSorry.AutoSize = true;
+            this.labelSorry.BackColor = System.Drawing.Color.Black;
+            this.labelSorry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelSorry.Location = new System.Drawing.Point(276, 30);
+            this.labelSorry.Name = "labelSorry";
+            this.labelSorry.Size = new System.Drawing.Size(212, 39);
+            this.labelSorry.TabIndex = 19;
+            this.labelSorry.Text = "Извините за данное неудобство,\r\nЭто ограничение VK, Его бот не в силах \r\nконтроли" +
+    "ровать.(Извините).\r\n";
             // 
             // FormCommentPostovSoob
             // 
@@ -355,5 +385,7 @@ namespace testVk
         private System.Windows.Forms.Label labelHelloPeepl;
         private System.Windows.Forms.Label labelPoiskGrup;
         private System.Windows.Forms.TextBox textBoxErrorAnsw;
+        private System.Windows.Forms.Label labelBetaVersions;
+        private System.Windows.Forms.Label labelSorry;
     }
 }
