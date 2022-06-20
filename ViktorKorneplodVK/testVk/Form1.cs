@@ -143,6 +143,7 @@ namespace testVk
         {
             FormDeletingBannedBlockedFriends frm = new FormDeletingBannedBlockedFriends();
             frm.access_token = this.access_token;
+            frm.Licensed = checklicense.Checked;
             frm.Show();
         }
 
@@ -150,6 +151,7 @@ namespace testVk
         {
             LikePhotoFriend lpf = new LikePhotoFriend();
             lpf.access_token = this.access_token;
+            lpf.Licensed = checklicense.Checked;
             lpf.Show();
         }
 
@@ -174,8 +176,8 @@ namespace testVk
         {
             LikeForm frm = new LikeForm();
             frm.access_token = this.access_token;
+            frm.Licensed = checklicense.Checked;
             frm.Show();
-            
         }
 
         private void LastNameLabel_Click(object sender, EventArgs e)
@@ -194,10 +196,104 @@ namespace testVk
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void friendsSuggestions_Click(object sender, EventArgs e)
+        {
+            frindsSuggestions frm = new frindsSuggestions();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
+
+        private void GlavTimer_Tick(object sender, EventArgs e)
+        {
+            
+        }
+        private void file()
+        {
+            try
+            {
+                WebClient client = new WebClient();
+                string answer = Encoding.UTF8.GetString(client.DownloadData(
+                    "https://api.vk.com/method/account.getProfileInfo?"
+                    + access_token
+                    + "&v=5.131"
+                    ));
+
+
+                getProfileInfo userInfo =
+                    JsonConvert.DeserializeObject<getProfileInfo>(answer);
+
+                textBox5.Text = userInfo.response.id;
+
+                //license = System.IO.File.ReadAllText(Application.StartupPath + @"\rfihs.txt");
+                foreach (char i in textBox5.Text)
+                {
+                    if (i == '1')
+                    {
+                        textBox4.Text = textBox4.Text + "a";
+                    }
+                    if (i == '2')
+                    {
+                        textBox4.Text = textBox4.Text + "g";
+                    }
+                    if (i == '3')
+                    {
+                        textBox4.Text = textBox4.Text + "c";
+                    }
+                    if (i == '4')
+                    {
+                        textBox4.Text = textBox4.Text + "v";
+                    }
+                    if (i == '5')
+                    {
+                        textBox4.Text = textBox4.Text + "o";
+                    }
+                    if (i == '6')
+                    {
+                        textBox4.Text = textBox4.Text + "f";
+                    }
+                    if (i == '7')
+                    {
+                        textBox4.Text = textBox4.Text + "l";
+                    }
+                    if (i == '8')
+                    {
+                        textBox4.Text = textBox4.Text + "k";
+                    }
+                    if (i == '9')
+                    {
+                        textBox4.Text = textBox4.Text + "a";
+                    }
+                    if (i == '0')
+                    {
+                        textBox4.Text = textBox4.Text + "s";
+                    }
+
+                }
+                //System.IO.File.WriteAllText(Application.StartupPath + @"\rfihs.txt", textBox4.Text);
+
+            }
+            catch
+            {
+                label1.Text = "есть";
+            }
+
+            string license = System.IO.File.ReadAllText(Application.StartupPath + @"\rfihs.txt");
+            if (license == textBox4.Text)
+            {
+                checklicense.Checked = true;
+            }
+            else
+            {
+                label1.Text = "Незарегистрированная версия";
+            }
+
+        }
+
+        private void ZayavkaFriend_Click(object sender, EventArgs e)
         {
             FormZayavkaFriend fzf = new FormZayavkaFriend();
             fzf.access_token = this.access_token;
+            fzf.Licensed = checklicense.Checked;
             fzf.Show();
         }
 

@@ -50,9 +50,9 @@
             // 
             // buttondeleted
             // 
-            this.buttondeleted.Location = new System.Drawing.Point(67, 239);
+            this.buttondeleted.Location = new System.Drawing.Point(67, 240);
             this.buttondeleted.Name = "buttondeleted";
-            this.buttondeleted.Size = new System.Drawing.Size(128, 23);
+            this.buttondeleted.Size = new System.Drawing.Size(128, 45);
             this.buttondeleted.TabIndex = 4;
             this.buttondeleted.Text = "удалить banned";
             this.buttondeleted.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(67, 174);
+            this.button3.Location = new System.Drawing.Point(67, 160);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 23);
+            this.button3.Size = new System.Drawing.Size(128, 50);
             this.button3.TabIndex = 5;
             this.button3.Text = "показать забаненных";
             this.button3.UseVisualStyleBackColor = true;

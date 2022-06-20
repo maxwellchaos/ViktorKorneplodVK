@@ -49,6 +49,7 @@ namespace testVk
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.GlavTimer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.ZayavkaFriend = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +185,77 @@ namespace testVk
             this.button1.TabIndex = 9;
             this.button1.Text = "кидать заявки друзьям друзей";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // friendsSuggestions
+            // 
+            this.friendsSuggestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.friendsSuggestions.Location = new System.Drawing.Point(138, 230);
+            this.friendsSuggestions.Margin = new System.Windows.Forms.Padding(2);
+            this.friendsSuggestions.Name = "friendsSuggestions";
+            this.friendsSuggestions.Size = new System.Drawing.Size(155, 48);
+            this.friendsSuggestions.TabIndex = 10;
+            this.friendsSuggestions.Text = "добавляю рекомендованных друзей";
+            this.friendsSuggestions.UseVisualStyleBackColor = true;
+            this.friendsSuggestions.Click += new System.EventHandler(this.friendsSuggestions_Click);
+            // 
+            // checklicense
+            // 
+            this.checklicense.AutoSize = true;
+            this.checklicense.Location = new System.Drawing.Point(518, 143);
+            this.checklicense.Margin = new System.Windows.Forms.Padding(2);
+            this.checklicense.Name = "checklicense";
+            this.checklicense.Size = new System.Drawing.Size(59, 17);
+            this.checklicense.TabIndex = 57;
+            this.checklicense.Text = "license";
+            this.checklicense.UseVisualStyleBackColor = true;
+            this.checklicense.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(473, 31);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(200, 41);
+            this.textBox4.TabIndex = 58;
+            this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(473, 88);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(200, 41);
+            this.textBox5.TabIndex = 59;
+            this.textBox5.Visible = false;
+            // 
+            // GlavTimer
+            // 
+            this.GlavTimer.Enabled = true;
+            this.GlavTimer.Interval = 300;
+            this.GlavTimer.Tick += new System.EventHandler(this.GlavTimer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(132, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 31);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "label1";
+            // 
+            // ZayavkaFriend
+            // 
+            this.ZayavkaFriend.Location = new System.Drawing.Point(138, 282);
+            this.ZayavkaFriend.Name = "ZayavkaFriend";
+            this.ZayavkaFriend.Size = new System.Drawing.Size(155, 52);
+            this.ZayavkaFriend.TabIndex = 61;
+            this.ZayavkaFriend.Text = "кидать заявки друзьям друзей";
+            this.ZayavkaFriend.UseVisualStyleBackColor = true;
+            this.ZayavkaFriend.Click += new System.EventHandler(this.ZayavkaFriend_Click);
             // 
             // friendsSuggestions
             // 
@@ -269,6 +340,7 @@ namespace testVk
             this.Controls.Add(this.AccessTokenTextBox);
             this.Controls.Add(this.StartWebBrowser);
             this.Controls.Add(this.friendsSuggestions);
+            this.Controls.Add(this.ZayavkaFriend);
             this.Name = "MainForm";
             this.Text = "Виктор Корнеплод VK";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -299,6 +371,7 @@ namespace testVk
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Timer GlavTimer;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ZayavkaFriend;
     }
 }
 
