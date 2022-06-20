@@ -112,6 +112,7 @@
             this.Controls.Add(this.buttonfriend);
             this.Name = "LikePhotoFriend";
             this.Text = "LikePhotoFriend";
+            this.Load += new System.EventHandler(this.LikePhotoFriend_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

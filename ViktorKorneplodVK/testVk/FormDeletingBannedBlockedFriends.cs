@@ -17,6 +17,7 @@ namespace testVk
     {
         public string access_token;
         private object userInfo;
+        public bool Licensed = false;
 
         public FormDeletingBannedBlockedFriends()
         {
@@ -87,6 +88,10 @@ namespace testVk
                 buttondeleted.Enabled = true;
                 button3.Enabled = true;
             }
+            if(Licensed == false)
+            {
+                buttondeleted.Enabled = false;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -139,6 +144,10 @@ namespace testVk
                 label1.Visible = true;
                 buttondeleted.Enabled = true;
                 button3.Enabled = true;
+            }
+            if(Licensed == false)
+            {
+                button3.Enabled = false;
             }
         }
 

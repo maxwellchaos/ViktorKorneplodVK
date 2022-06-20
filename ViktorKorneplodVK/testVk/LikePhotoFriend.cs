@@ -21,6 +21,7 @@ namespace testVk
         }
 
         public string access_token { get; internal set; }
+        public bool Licensed = false;
 
         private void buttonfriend_Click(object sender, EventArgs e)
         {
@@ -119,6 +120,15 @@ namespace testVk
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void LikePhotoFriend_Load(object sender, EventArgs e)
+        {
+            if(Licensed == false)
+            {
+                buttonfriend.Enabled = false;
+                textBox1.Enabled = false;
+            }
         }
     }
 }

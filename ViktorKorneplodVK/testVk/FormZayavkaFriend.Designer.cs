@@ -41,7 +41,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 141);
+            this.button1.Location = new System.Drawing.Point(30, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 47);
             this.button1.TabIndex = 0;
@@ -71,7 +71,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "ID";
-            this.columnHeader2.Width = 72;
+            this.columnHeader2.Width = 74;
             // 
             // label1
             // 
@@ -108,10 +108,10 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(12, 13);
+            this.textBox2.Location = new System.Drawing.Point(30, 12);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 87);
+            this.textBox2.Size = new System.Drawing.Size(208, 138);
             this.textBox2.TabIndex = 6;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             // 

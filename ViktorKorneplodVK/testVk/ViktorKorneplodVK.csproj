@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FantekriFormHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FantekriFormHelper.Designer.cs">
+      <DependentUpon>FantekriFormHelper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommentPostovSoob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommentPostovSoob.Designer.cs">
+      <DependentUpon>FormCommentPostovSoob.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDeletingBannedBlockedFriends.cs">
       <SubType>Form</SubType>
@@ -68,23 +80,56 @@
     <Compile Include="FormZayavkaFriend.Designer.cs">
       <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
     </Compile>
+    <Compile Include="frindsSuggestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frindsSuggestions.Designer.cs">
+      <DependentUpon>frindsSuggestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="LikePhotoFriend.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LikePhotoFriend.Designer.cs">
       <DependentUpon>LikePhotoFriend.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLikePostOnPeoplesWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLikePostOnPeoplesWall.Designer.cs">
+      <DependentUpon>FormLikePostOnPeoplesWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LikeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LikeForm.Designer.cs">
+      <DependentUpon>LikeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response.cs" />
+    <EmbeddedResource Include="FantekriFormHelper.resx">
+      <DependentUpon>FantekriFormHelper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommentPostovSoob.resx">
+      <DependentUpon>FormCommentPostovSoob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeletingBannedBlockedFriends.resx">
       <DependentUpon>FormDeletingBannedBlockedFriends.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormZayavkaFriend.resx">
       <DependentUpon>FormZayavkaFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frindsSuggestions.resx">
+      <DependentUpon>frindsSuggestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLikePostOnPeoplesWall.resx">
+      <DependentUpon>FormLikePostOnPeoplesWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LikeForm.resx">
+      <DependentUpon>LikeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LikePhotoFriend.resx">
       <DependentUpon>LikePhotoFriend.cs</DependentUpon>
@@ -97,7 +142,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ВК.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

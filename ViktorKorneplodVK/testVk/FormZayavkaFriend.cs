@@ -17,7 +17,7 @@ namespace testVk
     {
         internal string access_token;
         private int couner;
-
+        public bool Licensed = false;
         public FormZayavkaFriend()
         {
             InitializeComponent();
@@ -116,7 +116,11 @@ namespace testVk
 
         private void FormZayavkaFriend_Load(object sender, EventArgs e)
         {
-
+            if(Licensed == false)
+            {
+                button1.Enabled = false;    
+                button2.Enabled = false;
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
