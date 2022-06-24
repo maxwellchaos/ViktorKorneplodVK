@@ -50,6 +50,8 @@ namespace testVk
             this.GlavTimer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.ZayavkaFriend = new System.Windows.Forms.Button();
+            this.ButtonLicense = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViktorPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +109,7 @@ namespace testVk
             // 
             // FantekriBotHelper
             // 
-            this.FantekriBotHelper.Location = new System.Drawing.Point(9, 128);
+            this.FantekriBotHelper.Location = new System.Drawing.Point(9, 113);
             this.FantekriBotHelper.Name = "FantekriBotHelper";
             this.FantekriBotHelper.Size = new System.Drawing.Size(109, 45);
             this.FantekriBotHelper.TabIndex = 7;
@@ -117,7 +119,7 @@ namespace testVk
             // 
             // buttonPostOnStrangeWall
             // 
-            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(9, 177);
+            this.buttonPostOnStrangeWall.Location = new System.Drawing.Point(9, 162);
             this.buttonPostOnStrangeWall.Name = "buttonPostOnStrangeWall";
             this.buttonPostOnStrangeWall.Size = new System.Drawing.Size(109, 50);
             this.buttonPostOnStrangeWall.TabIndex = 8;
@@ -127,7 +129,7 @@ namespace testVk
             // 
             // DeletingBannedBlockedFriends
             // 
-            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(138, 128);
+            this.DeletingBannedBlockedFriends.Location = new System.Drawing.Point(138, 113);
             this.DeletingBannedBlockedFriends.Name = "DeletingBannedBlockedFriends";
             this.DeletingBannedBlockedFriends.Size = new System.Drawing.Size(155, 45);
             this.DeletingBannedBlockedFriends.TabIndex = 9;
@@ -170,10 +172,11 @@ namespace testVk
             // ViktorPictureBox
             // 
             this.ViktorPictureBox.Image = global::testVk.Properties.Resources.ВК;
-            this.ViktorPictureBox.Location = new System.Drawing.Point(532, 357);
+            this.ViktorPictureBox.Location = new System.Drawing.Point(-1, -3);
             this.ViktorPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ViktorPictureBox.Name = "ViktorPictureBox";
-            this.ViktorPictureBox.Size = new System.Drawing.Size(605, 400);
+            this.ViktorPictureBox.Size = new System.Drawing.Size(778, 409);
+            this.ViktorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ViktorPictureBox.TabIndex = 9;
             this.ViktorPictureBox.TabStop = false;
             // 
@@ -185,14 +188,15 @@ namespace testVk
             this.button1.TabIndex = 9;
             this.button1.Text = "кидать заявки друзьям друзей";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // friendsSuggestions
             // 
             this.friendsSuggestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.friendsSuggestions.Location = new System.Drawing.Point(138, 230);
+            this.friendsSuggestions.Location = new System.Drawing.Point(138, 228);
             this.friendsSuggestions.Margin = new System.Windows.Forms.Padding(2);
             this.friendsSuggestions.Name = "friendsSuggestions";
-            this.friendsSuggestions.Size = new System.Drawing.Size(155, 48);
+            this.friendsSuggestions.Size = new System.Drawing.Size(155, 52);
             this.friendsSuggestions.TabIndex = 10;
             this.friendsSuggestions.Text = "добавляю рекомендованных друзей";
             this.friendsSuggestions.UseVisualStyleBackColor = true;
@@ -201,7 +205,7 @@ namespace testVk
             // checklicense
             // 
             this.checklicense.AutoSize = true;
-            this.checklicense.Location = new System.Drawing.Point(518, 143);
+            this.checklicense.Location = new System.Drawing.Point(683, 76);
             this.checklicense.Margin = new System.Windows.Forms.Padding(2);
             this.checklicense.Name = "checklicense";
             this.checklicense.Size = new System.Drawing.Size(59, 17);
@@ -238,7 +242,7 @@ namespace testVk
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(132, 9);
+            this.label1.Location = new System.Drawing.Point(253, -3);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 31);
@@ -254,12 +258,29 @@ namespace testVk
             this.ZayavkaFriend.Text = "кидать заявки друзьям друзей";
             this.ZayavkaFriend.UseVisualStyleBackColor = true;
             this.ZayavkaFriend.Click += new System.EventHandler(this.ZayavkaFriend_Click);
+            //
+            // ButtonLicense
+            // 
+            this.ButtonLicense.BackColor = System.Drawing.Color.Red;
+            this.ButtonLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonLicense.Location = new System.Drawing.Point(302, 41);
+            this.ButtonLicense.Name = "ButtonLicense";
+            this.ButtonLicense.Size = new System.Drawing.Size(460, 353);
+            this.ButtonLicense.TabIndex = 61;
+            this.ButtonLicense.Text = "Выбрать лицензию";
+            this.ButtonLicense.UseVisualStyleBackColor = false;
+            this.ButtonLicense.Click += new System.EventHandler(this.ButtonLicense_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 399);
+            this.ClientSize = new System.Drawing.Size(774, 406);
             this.Controls.Add(this.ViktorPictureBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox5);
@@ -278,6 +299,7 @@ namespace testVk
             this.Controls.Add(this.StartWebBrowser);
             this.Controls.Add(this.friendsSuggestions);
             this.Controls.Add(this.ZayavkaFriend);
+            this.Controls.Add(this.ButtonLicense);
             this.Name = "MainForm";
             this.Text = "Виктор Корнеплод VK";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -309,6 +331,8 @@ namespace testVk
         private System.Windows.Forms.Timer GlavTimer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ZayavkaFriend;
+        private System.Windows.Forms.Button ButtonLicense;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

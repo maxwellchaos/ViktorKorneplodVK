@@ -11,6 +11,8 @@ namespace testVk
         public string access_token;
         public string access_token2 = "access_token=adb6569f9e2dd9b7a939c733518ceef99857c6c4c4aed6beb8e11b9606ecb0ebcbf3e252f1d4396979eff";
         public int ch = 1;
+        public string File;
+        public string Papka = (Application.StartupPath + @"\rfihs.txt");
         public MainForm()
         {
             InitializeComponent();
@@ -135,7 +137,6 @@ namespace testVk
             FormCommentPostovSoob frm = new FormCommentPostovSoob();
             frm.access_token = this.access_token;
             frm.Show();
-            frm.Licensed = checklicense.Checked;
         }
 
 
@@ -193,7 +194,13 @@ namespace testVk
         private void MainForm_Load(object sender, EventArgs e)
         {
             ViktorPictureBox.Location = new System.Drawing.Point(0, 0);
+        }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormZayavkaFriend fzf = new FormZayavkaFriend();
+            fzf.access_token = this.access_token;
+            fzf.Show();
         }
 
         private void friendsSuggestions_Click(object sender, EventArgs e)
@@ -276,18 +283,39 @@ namespace testVk
             {
                 label1.Text = "есть";
             }
-
-            string license = System.IO.File.ReadAllText(Application.StartupPath + @"\rfihs.txt");
-            if (license == textBox4.Text)
+            try
             {
-                checklicense.Checked = true;
+                string license = System.IO.File.ReadAllText(Application.StartupPath + @"\rfihs.txt");
+                if (license == textBox4.Text)
+                {
+                    checklicense.Checked = true;
+                    label1.Text = "Зарегистрированная версия";
+                    ButtonLicense.Visible = false;
+                }
+                else
+                {
+                    label1.Text = "Незарегистрированная версия";
+                    
+                }
             }
-            else
+            catch
             {
-                label1.Text = "Незарегистрированная версия";
-            }
 
+            }
         }
+
+        private void ButtonLicense_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                File = openFileDialog1.FileName;
+                System.IO.File.Copy(File, Papka, true);
+
+                Application.Restart();
+            }
+            
+        }
+
 
         private void ZayavkaFriend_Click(object sender, EventArgs e)
         {
