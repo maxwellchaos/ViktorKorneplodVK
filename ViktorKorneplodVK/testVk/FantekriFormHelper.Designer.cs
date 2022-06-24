@@ -91,7 +91,7 @@
             this.Privet.Size = new System.Drawing.Size(265, 95);
             this.Privet.TabIndex = 5;
             this.Privet.Text = "Добрый день, меня зовут ViktorKorneplodVK\r\nЯ могу ответить на некоторые ваши вопр" +
-    "осы!\r\nЕсли вы готовы начать работу со мной, то напишете \"Готов\"";
+    "осы!";
             this.Privet.Visible = false;
             // 
             // Opros_1
@@ -276,7 +276,7 @@
             this.OtvetNa1p_1.Name = "OtvetNa1p_1";
             this.OtvetNa1p_1.Size = new System.Drawing.Size(56, 44);
             this.OtvetNa1p_1.TabIndex = 25;
-            this.OtvetNa1p_1.Text = "Стоимость бота: лимон лимонов";
+            this.OtvetNa1p_1.Text = "Стоимость 50 рублей";
             this.OtvetNa1p_1.Visible = false;
             // 
             // OtvetNa2p_1

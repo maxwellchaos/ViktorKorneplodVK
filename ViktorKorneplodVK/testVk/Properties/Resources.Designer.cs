@@ -68,5 +68,15 @@ namespace testVk.Properties {
                 return ResourceManager.GetString("string1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ВК {
+            get {
+                object obj = ResourceManager.GetObject("ВК", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace testVk
         public string access_token;
         public string access_token2 = "access_token=adb6569f9e2dd9b7a939c733518ceef99857c6c4c4aed6beb8e11b9606ecb0ebcbf3e252f1d4396979eff";
         public int ch = 1;
+        public string File;
+        public string Papka = (Application.StartupPath + @"\rfihs.txt");
         public MainForm()
         {
             InitializeComponent();
@@ -46,6 +48,7 @@ namespace testVk
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+            Application.DoEvents();
             string str;
             str = StartWebBrowser.Url.ToString();
             if (str.Contains("access_token"))
@@ -60,6 +63,7 @@ namespace testVk
                 access_token = access_token.Remove(0, SharpPos + 1);
 
                 AccessTokenTextBox.Text = access_token;
+                Application.DoEvents();
                 file();
                 WebClient client = new WebClient();
                 string answer = Encoding.UTF8.GetString(client.DownloadData(
@@ -86,9 +90,16 @@ namespace testVk
                 LastNameLabel.Text = userInfo.response.last_name;
                 FirstNameLabel.Text = userInfo.response.first_name;
                 AvatarPictureBox.Load(avatar.response[0].photo_50);
-
-
+                ViktorPictureBox.Visible = false;
+                StartWebBrowser.Visible = false;
             }
+            else
+            {
+                ViktorPictureBox.Visible = false;
+                StartWebBrowser.BringToFront();
+                StartWebBrowser.Dock = DockStyle.Fill;
+            }
+
         }
 
         private void button1_Paint(object sender, PaintEventArgs e)
@@ -120,6 +131,86 @@ namespace testVk
             this.Show();
         }
 
+        private void buttonPostOnStrangeWall_Click(object sender, EventArgs e)
+        {
+            //Вызов второрй формы
+            FormCommentPostovSoob frm = new FormCommentPostovSoob();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
+
+
+        private void DeletingBannedBlockedFriends_Click(object sender, EventArgs e)
+        {
+            FormDeletingBannedBlockedFriends frm = new FormDeletingBannedBlockedFriends();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
+
+        private void LikePhotoFriend_Click(object sender, EventArgs e)
+        {
+            LikePhotoFriend lpf = new LikePhotoFriend();
+            lpf.access_token = this.access_token;
+            lpf.Show();
+        }
+
+        private void buttonLikePostOnPeoplesWall_Click(object sender, EventArgs e)
+        {
+            FormLikePostOnPeoplesWall frm = new FormLikePostOnPeoplesWall();
+            frm.access_token = this.access_token;
+            frm.Show();
+
+            for (int i = 0; i < 300; i++)
+            {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(10);
+            }
+        }
+        private void FirstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Likebutton_Click(object sender, EventArgs e)
+        {
+            LikeForm frm = new LikeForm();
+            frm.access_token = this.access_token;
+            frm.Show();
+            
+        }
+
+        private void LastNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ViktorPictureBox.Location = new System.Drawing.Point(0, 0);
+
+
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormZayavkaFriend fzf = new FormZayavkaFriend();
+            fzf.access_token = this.access_token;
+            fzf.Show();
+        }
+
+        private void friendsSuggestions_Click(object sender, EventArgs e)
+        {
+            frindsSuggestions frm = new frindsSuggestions();
+            frm.access_token = this.access_token;
+            frm.Show();
+        }
 
         private void GlavTimer_Tick(object sender, EventArgs e)
         {
@@ -194,12 +285,45 @@ namespace testVk
             {
                 label1.Text = "есть";
             }
-
-            string license = System.IO.File.ReadAllText(Application.StartupPath + @"\rfihs.txt");
-            if (license == textBox4.Text)
+            try
             {
-                checklicense.Checked = true;
+                string license = System.IO.File.ReadAllText(Application.StartupPath + @"\rfihs.txt");
+                if (license == textBox4.Text)
+                {
+                    checklicense.Checked = true;
+                    label1.Text = "Зарегистрированная версия";
+                    ButtonLicense.Visible = false;
+                }
+                else
+                {
+                    label1.Text = "Незарегистрированная версия";
+                    
+                }
             }
+            catch
+            {
+
+            }
+            
+
+
+        }
+
+        private void ButtonLicense_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                File = openFileDialog1.FileName;
+                System.IO.File.Copy(File, Papka, true);
+
+                Application.Restart();
+            }
+            
+        }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

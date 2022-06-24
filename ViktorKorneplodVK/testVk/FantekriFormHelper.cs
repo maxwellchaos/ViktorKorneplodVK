@@ -17,6 +17,7 @@ namespace testVk
     {
         public string message;
         public int one;
+        public int two;
         public int ch = 1;
 
 
@@ -150,6 +151,15 @@ namespace testVk
         {
             try
             {
+                if (checklicense.Checked == false)
+                {
+                    two = two + 1;
+                    if (two > 500)
+                    {
+                        GlavTimer.Enabled = false;
+                    }
+                }
+
                 WebClient client = new WebClient();
                 string request = "https://api.vk.com/method/messages.getConversations?"
                         + access_token
