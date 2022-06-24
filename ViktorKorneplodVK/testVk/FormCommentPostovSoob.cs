@@ -8,8 +8,8 @@ using System.Text;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace testVk
 {
@@ -44,7 +44,7 @@ namespace testVk
             WebClient client = new WebClient();
             for (int i = 0; i < textBoxInfoPosts.Lines.Length; i++)
             {
-                progressBarOjidaniya.Maximum = 20;
+                progressBarOjidaniya.Maximum = 100;
                 labelTextPoiska.Text = textBoxInfoPosts.Lines[i];
                 if (IDtextBoxPoisckID.Text == "")
                 {
@@ -65,6 +65,7 @@ namespace testVk
                         Thread.Sleep(100);
                         foreach (WallPostsInfo.Item Post in infoPosts.response.items)
                         {
+                            buttonCreateComment.Enabled = false;
                             if (Post.post_type != "post")
                             {
                                 continue;
@@ -78,38 +79,12 @@ namespace testVk
                             {
                                 if (number != 1)
                                 {
-                                    int wait = 31000;
+                                    int wait = 26000;
                                     for (int j = 0; j < wait / 10; j++)
                                     {
                                         Application.DoEvents();
                                         Thread.Sleep(10);
                                     }
-                                    string an;
-                                    an = CreatComm(Post.id);
-                                }
-                                else
-                                {
-                                    int wait = 11000;
-                                    for (int j = 0; j < wait / 10; j++)
-                                    {
-                                        Application.DoEvents();
-                                        Thread.Sleep(10);
-                                    }
-                                    string an;
-                                    an = CreatComm(Post.id);
-                                }
-
-                                number = rnd.Next(3);
-                                if (number != 1)
-                                {
-                                    int wait = 18000;
-                                    for (int j = 0; j < wait / 10; j++)
-                                    {
-                                        Application.DoEvents();
-                                        Thread.Sleep(10);
-                                    }
-                                    string an;
-                                    an = CreatComm(Post.id);
                                 }
                                 else
                                 {
@@ -119,8 +94,25 @@ namespace testVk
                                         Application.DoEvents();
                                         Thread.Sleep(10);
                                     }
-                                    string an;
-                                    an = CreatComm(Post.id);
+                                }
+                                number = rnd.Next(3);
+                                if (number != 1)
+                                {
+                                    int wait = 15000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                else
+                                {
+                                    int wait = 7000;
+                                    for (int j = 0; j < wait / 10; j++)
+                                    {
+                                        Application.DoEvents();
+                                        Thread.Sleep(10);
+                                    }
                                 }
                             }
                             ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -128,25 +120,21 @@ namespace testVk
                             {
                                 if (number != 1)
                                 {
-                                    int wait = 42000;
+                                    int wait = 35000;
                                     for (int j = 0; j < wait / 10; j++)
                                     {
                                         Application.DoEvents();
                                         Thread.Sleep(10);
                                     }
-                                    string an;
-                                    an = CreatComm(Post.id);
                                 }
                                 else
                                 {
-                                    int wait = 21000;
+                                    int wait = 23000;
                                     for (int j = 0; j < wait / 10; j++)
                                     {
                                         Application.DoEvents();
                                         Thread.Sleep(10);
                                     }
-                                    string an;
-                                    an = CreatComm(Post.id);
                                 }
 
                                 number = rnd.Next(3);
@@ -158,21 +146,25 @@ namespace testVk
                                         Application.DoEvents();
                                         Thread.Sleep(10);
                                     }
-                                    string an;
-                                    an = CreatComm(Post.id);
                                 }
                                 else
                                 {
-                                    int wait = 19000;
+                                    int wait = 21000;
                                     for (int j = 0; j < wait / 10; j++)
                                     {
                                         Application.DoEvents();
                                         Thread.Sleep(10);
                                     }
-                                    string an;
-                                    an = CreatComm(Post.id);
                                 }
                             }
+                            request = "https://api.vk.com/method/wall.createComment?owner_id=-"
+                          + textBoxInfoPosts.Lines[i]
+                          + "&post_id="
+                          + Post.id
+                          + "&message="
+                          + textBoxCreateComment.Text + "&"
+                          + access_token
+                          + "&v=5.131";
                             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                             //показ капчи
                             answer = Encoding.UTF8.GetString(client.DownloadData(request));
@@ -230,9 +222,6 @@ namespace testVk
                                 + "/"
                                 + errors.ToString();
                             Application.DoEvents();
-
-
-
                         }
                     }
                     catch (Exception)
@@ -246,23 +235,10 @@ namespace testVk
             {
                 labelOtprava.Visible = false;
                 progressBarOjidaniya.Visible = false;
+                buttonCreateComment.Enabled = true;
+                buttonGroupsSearch.Enabled = true;
+                textBoxInfoPosts.Text = "";
             }
-            buttonCreateComment.Enabled = false;
-        }
-        private string CreatComm(int postid)
-        {
-            string request = "https://api.vk.com/method/wall.createComment?owner_id=-"
-             + textBoxInfoPosts.Lines
-             + "&post_id="
-             + "Post.id"+postid.ToString()
-             + "&message="
-             + textBoxCreateComment.Text + "&"
-             + access_token
-             + "&v=5.131";
-            WebClient client = new WebClient();
-            string answer;
-            answer = Encoding.UTF8.GetString(client.DownloadData(request));
-            return answer;
         }
 
         private void buttonGroupsSearch_Click(object sender, EventArgs e)
@@ -280,9 +256,9 @@ namespace testVk
             }
                 labelOiOi.Visible = false;
                 WebClient client = new WebClient();
-            string request = "https://api.vk.com/method/groups.search?owner_id="
-                + IDTextBox
-                + "&count=" + count.ToString()
+                string request = "https://api.vk.com/method/groups.search?owner_id="
+                    + IDTextBox
+                    + "&count=" + count.ToString()
                     + "&q="
                     + IDtextBoxPoisckID.Text + "&"
                     + access_token + "&v=5.131";
