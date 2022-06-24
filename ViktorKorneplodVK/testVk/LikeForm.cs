@@ -18,6 +18,7 @@ namespace testVk
         int error = 0;
         int success = 0;
         public string access_token;
+        public bool Licensed;
         public LikeForm()
         {
             InitializeComponent();

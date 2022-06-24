@@ -33,7 +33,7 @@ namespace testVk
             string Answer = Encoding.UTF8.GetString(Client.DownloadData(Request));
             FriendRecomendation id = JsonConvert.DeserializeObject<FriendRecomendation>(Answer);
 
-            for (int i=0;i<=100;i=i+1)
+            for (int i=0;i<100;i=i+1)
             {
                 string text = textBoxText.Text;
                 WebClient WClient = new WebClient();

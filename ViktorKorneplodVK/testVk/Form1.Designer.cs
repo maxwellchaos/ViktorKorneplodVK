@@ -163,7 +163,7 @@ namespace testVk
             this.Likebutton.Name = "Likebutton";
             this.Likebutton.Size = new System.Drawing.Size(109, 48);
             this.Likebutton.TabIndex = 7;
-            this.Likebutton.Text = "лайкер фото на стене сообщества";
+            this.Likebutton.Text = "лайкер постов на стене сообщества";
             this.Likebutton.UseVisualStyleBackColor = true;
             this.Likebutton.Click += new System.EventHandler(this.Likebutton_Click);
             // 
@@ -208,7 +208,6 @@ namespace testVk
             this.checklicense.TabIndex = 57;
             this.checklicense.Text = "license";
             this.checklicense.UseVisualStyleBackColor = true;
-            this.checklicense.Visible = false;
             // 
             // textBox4
             // 
@@ -234,7 +233,6 @@ namespace testVk
             // 
             this.GlavTimer.Enabled = true;
             this.GlavTimer.Interval = 300;
-            this.GlavTimer.Tick += new System.EventHandler(this.GlavTimer_Tick);
             // 
             // label1
             // 
@@ -256,67 +254,6 @@ namespace testVk
             this.ZayavkaFriend.Text = "кидать заявки друзьям друзей";
             this.ZayavkaFriend.UseVisualStyleBackColor = true;
             this.ZayavkaFriend.Click += new System.EventHandler(this.ZayavkaFriend_Click);
-            // 
-            // friendsSuggestions
-            // 
-            this.friendsSuggestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.friendsSuggestions.Location = new System.Drawing.Point(138, 230);
-            this.friendsSuggestions.Margin = new System.Windows.Forms.Padding(2);
-            this.friendsSuggestions.Name = "friendsSuggestions";
-            this.friendsSuggestions.Size = new System.Drawing.Size(155, 48);
-            this.friendsSuggestions.TabIndex = 10;
-            this.friendsSuggestions.Text = "добавляю рекомендованных друзей";
-            this.friendsSuggestions.UseVisualStyleBackColor = true;
-            this.friendsSuggestions.Click += new System.EventHandler(this.friendsSuggestions_Click);
-            // 
-            // checklicense
-            // 
-            this.checklicense.AutoSize = true;
-            this.checklicense.Location = new System.Drawing.Point(547, 133);
-            this.checklicense.Margin = new System.Windows.Forms.Padding(2);
-            this.checklicense.Name = "checklicense";
-            this.checklicense.Size = new System.Drawing.Size(59, 17);
-            this.checklicense.TabIndex = 57;
-            this.checklicense.Text = "license";
-            this.checklicense.UseVisualStyleBackColor = true;
-            this.checklicense.Visible = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(473, 31);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 41);
-            this.textBox4.TabIndex = 58;
-            this.textBox4.Visible = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(473, 88);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 41);
-            this.textBox5.TabIndex = 59;
-            this.textBox5.Visible = false;
-            // 
-            // GlavTimer
-            // 
-            this.GlavTimer.Enabled = true;
-            this.GlavTimer.Interval = 300;
-            this.GlavTimer.Tick += new System.EventHandler(this.GlavTimer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(132, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 31);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "label1";
             // 
             // MainForm
             // 
