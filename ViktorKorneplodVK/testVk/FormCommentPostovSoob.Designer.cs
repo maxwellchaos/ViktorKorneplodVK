@@ -47,13 +47,13 @@ namespace testVk
             this.labelOiOiCaptcha = new System.Windows.Forms.Label();
             this.textBoxOiOiCaptcha = new System.Windows.Forms.TextBox();
             this.panelOiOiCaptcha = new System.Windows.Forms.Panel();
+            this.labelSorry = new System.Windows.Forms.Label();
             this.buttonGGWPCaptcha = new System.Windows.Forms.Button();
             this.panelOsnovaVsego = new System.Windows.Forms.Panel();
+            this.labelBetaVersions = new System.Windows.Forms.Label();
             this.textBoxErrorAnsw = new System.Windows.Forms.TextBox();
             this.labelPoiskGrup = new System.Windows.Forms.Label();
             this.labelHelloPeepl = new System.Windows.Forms.Label();
-            this.labelBetaVersions = new System.Windows.Forms.Label();
-            this.labelSorry = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOiOiCaptcha)).BeginInit();
             this.panelOiOiCaptcha.SuspendLayout();
             this.panelOsnovaVsego.SuspendLayout();
@@ -114,7 +114,7 @@ namespace testVk
             // 
             this.labelTextPoiska.AutoSize = true;
             this.labelTextPoiska.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTextPoiska.Location = new System.Drawing.Point(4, 300);
+            this.labelTextPoiska.Location = new System.Drawing.Point(4, 338);
             this.labelTextPoiska.Name = "labelTextPoiska";
             this.labelTextPoiska.Size = new System.Drawing.Size(25, 18);
             this.labelTextPoiska.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace testVk
             this.ErrorAndSuccessLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ErrorAndSuccessLabel.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ErrorAndSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ErrorAndSuccessLabel.Location = new System.Drawing.Point(12, 330);
+            this.ErrorAndSuccessLabel.Location = new System.Drawing.Point(12, 368);
             this.ErrorAndSuccessLabel.Name = "ErrorAndSuccessLabel";
             this.ErrorAndSuccessLabel.Size = new System.Drawing.Size(0, 20);
             this.ErrorAndSuccessLabel.TabIndex = 9;
@@ -172,8 +172,7 @@ namespace testVk
             // progressBarOjidaniya
             // 
             this.progressBarOjidaniya.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.progressBarOjidaniya.Location = new System.Drawing.Point(3, 274);
-            this.progressBarOjidaniya.Maximum = 20;
+            this.progressBarOjidaniya.Location = new System.Drawing.Point(0, 314);
             this.progressBarOjidaniya.Name = "progressBarOjidaniya";
             this.progressBarOjidaniya.Size = new System.Drawing.Size(293, 23);
             this.progressBarOjidaniya.TabIndex = 12;
@@ -185,7 +184,7 @@ namespace testVk
             this.labelOtprava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelOtprava.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelOtprava.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.labelOtprava.Location = new System.Drawing.Point(3, 248);
+            this.labelOtprava.Location = new System.Drawing.Point(0, 288);
             this.labelOtprava.Name = "labelOtprava";
             this.labelOtprava.Size = new System.Drawing.Size(293, 23);
             this.labelOtprava.TabIndex = 13;
@@ -245,6 +244,18 @@ namespace testVk
             this.panelOiOiCaptcha.Size = new System.Drawing.Size(501, 256);
             this.panelOiOiCaptcha.TabIndex = 18;
             // 
+            // labelSorry
+            // 
+            this.labelSorry.AutoSize = true;
+            this.labelSorry.BackColor = System.Drawing.Color.Black;
+            this.labelSorry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelSorry.Location = new System.Drawing.Point(276, 30);
+            this.labelSorry.Name = "labelSorry";
+            this.labelSorry.Size = new System.Drawing.Size(212, 39);
+            this.labelSorry.TabIndex = 19;
+            this.labelSorry.Text = "Извините за данное неудобство,\r\nЭто ограничение VK, Его бот не в силах \r\nконтроли" +
+    "ровать.(Извините).\r\n";
+            // 
             // buttonGGWPCaptcha
             // 
             this.buttonGGWPCaptcha.BackColor = System.Drawing.Color.Black;
@@ -283,6 +294,19 @@ namespace testVk
             this.panelOsnovaVsego.Size = new System.Drawing.Size(915, 580);
             this.panelOsnovaVsego.TabIndex = 19;
             // 
+            // labelBetaVersions
+            // 
+            this.labelBetaVersions.AutoSize = true;
+            this.labelBetaVersions.BackColor = System.Drawing.Color.Black;
+            this.labelBetaVersions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBetaVersions.ForeColor = System.Drawing.Color.Red;
+            this.labelBetaVersions.Location = new System.Drawing.Point(-4, 185);
+            this.labelBetaVersions.Name = "labelBetaVersions";
+            this.labelBetaVersions.Size = new System.Drawing.Size(681, 100);
+            this.labelBetaVersions.TabIndex = 23;
+            this.labelBetaVersions.Text = resources.GetString("labelBetaVersions.Text");
+            this.labelBetaVersions.Visible = false;
+            // 
             // textBoxErrorAnsw
             // 
             this.textBoxErrorAnsw.Location = new System.Drawing.Point(320, 187);
@@ -316,31 +340,6 @@ namespace testVk
             this.labelHelloPeepl.TabIndex = 20;
             this.labelHelloPeepl.Text = "Приветствую, данная програма поможет оставить немалое количество комментариев без" +
     " особых проблем!\r\n";
-            // 
-            // labelBetaVersions
-            // 
-            this.labelBetaVersions.AutoSize = true;
-            this.labelBetaVersions.BackColor = System.Drawing.Color.Black;
-            this.labelBetaVersions.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBetaVersions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelBetaVersions.Location = new System.Drawing.Point(3, 191);
-            this.labelBetaVersions.Name = "labelBetaVersions";
-            this.labelBetaVersions.Size = new System.Drawing.Size(686, 76);
-            this.labelBetaVersions.TabIndex = 23;
-            this.labelBetaVersions.Text = resources.GetString("labelBetaVersions.Text");
-            this.labelBetaVersions.Visible = false;
-            // 
-            // labelSorry
-            // 
-            this.labelSorry.AutoSize = true;
-            this.labelSorry.BackColor = System.Drawing.Color.Black;
-            this.labelSorry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelSorry.Location = new System.Drawing.Point(276, 30);
-            this.labelSorry.Name = "labelSorry";
-            this.labelSorry.Size = new System.Drawing.Size(212, 39);
-            this.labelSorry.TabIndex = 19;
-            this.labelSorry.Text = "Извините за данное неудобство,\r\nЭто ограничение VK, Его бот не в силах \r\nконтроли" +
-    "ровать.(Извините).\r\n";
             // 
             // FormCommentPostovSoob
             // 
